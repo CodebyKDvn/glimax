@@ -1,0 +1,27 @@
+# Project Genome Architecture Plugin Configuration
+genome:
+  max_tokens: 2000
+  synthesized_context_max_tokens: 1200
+  compression_ratio_target: 0.93
+
+components:
+  architecture_dna:
+    enabled: true
+    max_tokens: 400
+  dependency_graph:
+    enabled: true
+    max_tokens: 500
+  pattern_library:
+    enabled: true
+    max_tokens: 400
+  semantic_index:
+    enabled: true
+    max_tokens: 400
+  evolution_memory:
+    enabled: true
+    max_tokens: 300
+
+synthesis:
+  strategy: "relevance_weighted"
+  include_file_paths: true
+  include_key_signatures: true

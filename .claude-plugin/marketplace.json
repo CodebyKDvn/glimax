@@ -1,0 +1,22 @@
+{
+  "name": "glimax",
+  "owner": {
+    "name": "CodebyKDvn",
+    "url": "https://github.com/CodebyKDvn"
+  },
+  "plugins": [
+    {
+      "name": "glimax",
+      "source": ".",
+      "description": "Token-economy toolkit: ROI-based artifact evolution (token-darwin) and project context compression (project-genome).",
+      "version": "1.0.0",
+      "author": {
+        "name": "CodebyKDvn"
+      },
+      "homepage": "https://github.com/CodebyKDvn/glimax",
+      "repository": "https://github.com/CodebyKDvn/glimax",
+      "license": "MIT",
+      "keywords": ["tokens", "context", "evolution", "genome", "compression"]
+    }
+  ]
+}

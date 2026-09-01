@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Evolution state (local, per-project)
+.darwin_state.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="330" viewBox="0 0 860 330" font-family="'Segoe UI', Arial, sans-serif">
+  <rect width="860" height="330" fill="#0d1117" rx="12"/>
+  <text x="430" y="40" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">Project-Genome Compression Funnel</text>
+
+  <!-- funnel bars -->
+  <rect x="80" y="80" width="700" height="52" rx="6" fill="#f85149" opacity="0.85"/>
+  <text x="430" y="112" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">raw project context ≈ 30,000 tokens</text>
+
+  <rect x="180" y="152" width="500" height="52" rx="6" fill="#d29922" opacity="0.9"/>
+  <text x="430" y="184" text-anchor="middle" fill="#0d1117" font-size="15" font-weight="600">project genome ≤ 2,000 tokens</text>
+
+  <rect x="280" y="224" width="300" height="52" rx="6" fill="#3fb950" opacity="0.9"/>
+  <text x="430" y="256" text-anchor="middle" fill="#0d1117" font-size="15" font-weight="600">task context ≈ 1,200 tokens</text>
+
+  <!-- arrows -->
+  <defs><marker id="g" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8b949e"/></marker></defs>
+  <line x1="430" y1="134" x2="430" y2="148" stroke="#8b949e" stroke-width="2" marker-end="url(#g)"/>
+  <line x1="430" y1="206" x2="430" y2="220" stroke="#8b949e" stroke-width="2" marker-end="url(#g)"/>
+
+  <!-- side labels -->
+  <text x="795" y="110" fill="#8b949e" font-size="12" text-anchor="start"></text>
+  <text x="695" y="182" fill="#e6edf3" font-size="12">GenomeBuilder scan</text>
+  <text x="595" y="254" fill="#e6edf3" font-size="12">synthesize_context(task)</text>
+
+  <text x="430" y="306" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">≥ 93% token reduction — only task-relevant structure enters the prompt</text>
+</svg>
