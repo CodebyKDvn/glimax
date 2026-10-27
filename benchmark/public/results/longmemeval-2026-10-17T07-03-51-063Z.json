@@ -1,0 +1,74 @@
+{
+ "bench": "longmemeval",
+ "stamp": "2026-10-17T07-03-51-063Z",
+ "samples": 8,
+ "questions": 8,
+ "scored": 8,
+ "aggregate": {
+  "graph": {
+   "n": 8,
+   "r1": 0.625,
+   "r5": 1,
+   "r10": 1,
+   "r50": 1,
+   "mrr": 0.7708333333333333,
+   "p1": 0,
+   "p10": 0,
+   "hasPresence": false,
+   "p50ms": 17.152495,
+   "p95ms": 21.829158
+  },
+  "verbatim": {
+   "n": 8,
+   "r1": 0.875,
+   "r5": 1,
+   "r10": 1,
+   "r50": 1,
+   "mrr": 0.9166666666666666,
+   "p1": 0,
+   "p10": 0,
+   "hasPresence": false,
+   "p50ms": 4.246523,
+   "p95ms": 6.192109
+  },
+  "union": {
+   "n": 8,
+   "r1": 0.625,
+   "r5": 1,
+   "r10": 1,
+   "r50": 1,
+   "mrr": 0.7708333333333333,
+   "p1": 0,
+   "p10": 0,
+   "hasPresence": false,
+   "p50ms": 21.065138,
+   "p95ms": 27.000534000000002
+  },
+  "product": {
+   "n": 8,
+   "r1": 0.625,
+   "r5": 1,
+   "r10": 1,
+   "r50": 1,
+   "mrr": 0.7708333333333333,
+   "p1": 0,
+   "p10": 0,
+   "hasPresence": false,
+   "p50ms": 17.576724,
+   "p95ms": 21.263001
+  }
+ },
+ "lines": [
+  "longmemeval — Chronos-Palace v4.0 · retrieval level · 8 samples · 8 questions (8 scored, 0 abstention/unscored)",
+  "ingested: 4184 turns → 4184 edges / 4184 L3 rows (13222.22ms total)\n",
+  "note: r1..r50 here = fraction of required gold EVIDENCE items (turns/sessions) found in top-k of retrieved turns.",
+  "",
+  "| channel | R@1 | R@5 | R@10 | R@50 | MRR | p50 ms | p95 ms |",
+  "|---------|----:|----:|-----:|-----:|----:|-------:|-------:|",
+  "| graph   | 62.5% | 100% | 100% | 100% | 0.77 | 17.15 | 21.83 |",
+  "| verbatim | 87.5% | 100% | 100% | 100% | 0.92 | 4.25 | 6.19 |",
+  "| union   | 62.5% | 100% | 100% | — | 0.77 | 21.07 | 27 |",
+  "| product | 62.5% | 100% | 100% | — | 0.77 | 17.58 | 21.26 |",
+  "\nproduct packet: mean 233.9 tok · p95 240 tok · \"nothing remembered\": 0/8"
+ ]
+}

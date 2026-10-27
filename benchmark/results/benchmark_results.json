@@ -1,0 +1,2314 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-17T04:05:43.128Z",
+    "benchmark": "chronos-palace-v4-head-to-head",
+    "scales": [
+      50,
+      150,
+      500,
+      1000
+    ],
+    "tasks": 100,
+    "reps": 300,
+    "tokenMeter": "aaak.estimateTokens (same meter for every system)",
+    "honesty": {
+      "chronos": "measured — real engine executed in-process",
+      "rivals": "modelled — calibrated formulas over measured corpus facts (see rivals.ts)"
+    },
+    "runtime": {
+      "bun": "1.4.3",
+      "platform": "linux/x64",
+      "cpus": 12
+    }
+  },
+  "bench1": [
+    {
+      "files": 50,
+      "scannedFiles": 48,
+      "rawTokens": 18089,
+      "rawBytes": 66885,
+      "moduleCount": 10,
+      "buildMs": 41.3,
+      "genome": {
+        "c1": 31,
+        "c2": 267,
+        "c3": 3,
+        "c4": 497,
+        "c5": 3,
+        "total": 801
+      },
+      "genomeCapped": 801,
+      "genomeSample": {
+        "c1": "[C1|fw:express|svc:3|db:prisma|auth:jsonwebtoken|api:rest|test:vitest|ts:off|dirs:src/core,src/lib,src/modules]",
+        "c2": "[C2|files:48|hubs:11] src/core/db.ts<-src/modules/auth/model.ts,src/modules/billing/model.ts,src/modules/catalog/model.ts,src/modules/flashcards/model.ts,src/modules/media/model.ts,src/modules/notify/model.ts | src/core/http.ts<-src/modules/auth/service.ts,src/modules/billing/service.ts,src/modules/catalog/service.ts,src/modules/flashcards/service.ts,src/modules/media/service.ts,src/modules/notify/service.ts | src/modules/auth/index.ts->src/modules/auth/service.ts,src/modules/auth/model.ts,src/m",
+        "c3": "[C3|pat:0] ",
+        "c4": "[C4|ptr:70] Db@src/core/db.ts:1-4 | httpGet@src/core/http.ts:1-5 | estimateTokens@src/core/tokens.ts:1-3 | AuthRow@src/modules/auth/model.ts:3-8 | BillingRow@src/modules/billing/model.ts:3-8 | CatalogRow@src/modules/catalog/model.ts:3-8 | FlashcardsRow@src/modules/flashcards/model.ts:3-8 | FlashcardsRecord@src/modules/flashcards/service.ts:3-8 | MediaRow@src/modules/media/model.ts:3-8 | NotifyRow@src/modules/notify/model.ts:3-8 | OrdersRow@src/modules/orders/model.ts:3-8 | ReportsRow@src/modules",
+        "c5": "[C5|less:0] "
+      },
+      "tasks": [
+        {
+          "id": "add_endpoint",
+          "category": "add_endpoint",
+          "packetTokens": 712,
+          "slices": 3,
+          "sliceFiles": [
+            "src/modules/flashcards/routes.ts:6-11",
+            "src/modules/flashcards/model.ts:10-48",
+            "src/modules/flashcards/index.ts:5-7"
+          ],
+          "sliceHitsTarget": true,
+          "synthMs": 7.612,
+          "snr": 0.5365,
+          "archRecall": 1,
+          "archRecallTarget": 1,
+          "rivals": {
+            "full_context": {
+              "tokens": 20489,
+              "roundTrips": 1,
+              "overheadMs": 35,
+              "snr": 0.1807
+            },
+            "vector_rag": {
+              "tokens": 4121,
+              "roundTrips": 3,
+              "overheadMs": 420,
+              "snr": 0.575
+            },
+            "fact_memory": {
+              "tokens": 1684,
+              "roundTrips": 4,
+              "overheadMs": 260,
+              "snr": 0.5046
+            },
+            "subagent": {
+              "tokens": 4896,
+              "roundTrips": 6,
+              "overheadMs": 2800,
+              "snr": 0.3974
+            },
+            "skill_harness": {
+              "tokens": 1703,
+              "roundTrips": 3,
+              "overheadMs": 90,
+              "snr": 0.4952
+            }
+          }
+        },
+        {
+          "id": "fix_auth",
+          "category": "fix_bug",
+          "packetTokens": 655,
+          "slices": 3,
+          "sliceFiles": [
+            "src/core/tokens.ts:1-3",
+            "src/modules/auth/routes.ts:6-12",
+            "src/modules/auth/model.ts:10-47"
+          ],
+          "sliceHitsTarget": false,
+          "synthMs": 6.527,
+          "snr": 0.858,
+          "archRecall": 1,
+          "archRecallTarget": 1,
+          "rivals": {
+            "full_context": {
+              "tokens": 20489,
+              "roundTrips": 1,
+              "overheadMs": 35,
+              "snr": 0.2079
+            },
+            "vector_rag": {
+              "tokens": 3287,
+              "roundTrips": 3,
+              "overheadMs": 420,
+              "snr": 0.575
+            },
+            "fact_memory": {
+              "tokens": 1870,
+              "roundTrips": 4,
+              "overheadMs": 260,
+              "snr": 0.5489
+            },
+            "subagent": {
+              "tokens": 4896,
+              "roundTrips": 6,
+              "overheadMs": 2800,
+              "snr": 0.3974
+            },
+            "skill_harness": {
+              "tokens": 1889,
+              "roundTrips": 3,
+              "overheadMs": 90,
+              "snr": 0.5447
+            }
+          }
+        }
+      ]
+    },
+    {
+      "files": 150,
+      "scannedFiles": 148,
+      "rawTokens": 57143,
+      "rawBytes": 211122,
+      "moduleCount": 35,
+      "buildMs": 45.5,
+      "genome": {
+        "c1": 31,
+        "c2": 22,
+        "c3": 3,
+        "c4": 498,
+        "c5": 3,
+        "total": 557
+      },
+      "genomeCapped": 557,
+      "genomeSample": {
+        "c1": "[C1|fw:express|svc:3|db:prisma|auth:jsonwebtoken|api:rest|test:vitest|ts:off|dirs:src/core,src/lib,src/modules]",
+        "c2": "[C2|files:148|hubs:2] src/modules->src/core | src/core<-src/modules",
+        "c3": "[C3|pat:0] ",
+        "c4": "[C4|ptr:70] Db@src/core/db.ts:1-4 | httpGet@src/core/http.ts:1-5 | estimateTokens@src/core/tokens.ts:1-3 | AuditRow@src/modules/audit/model.ts:3-8 | AuthRow@src/modules/auth/model.ts:3-8 | Auth2Row@src/modules/auth2/model.ts:3-8 | BillingRow@src/modules/billing/model.ts:3-8 | Billing2Row@src/modules/billing2/model.ts:3-8 | CatalogRow@src/modules/catalog/model.ts:3-8 | Catalog2Row@src/modules/catalog2/model.ts:3-8 | DeckRow@src/modules/deck/model.ts:3-8 | ExportRow@src/modules/export/model.ts:3-8",
+        "c5": "[C5|less:0] "
+      },
+      "tasks": [
+        {
+          "id": "add_endpoint",
+          "category": "add_endpoint",
+          "packetTokens": 728,
+          "slices": 3,
+          "sliceFiles": [
+            "src/modules/flashcards/routes.ts:6-13",
+            "src/modules/flashcards/model.ts:10-45",
+            "src/modules/flashcards/index.ts:5-7"
+          ],
+          "sliceHitsTarget": true,
+          "synthMs": 5.988,
+          "snr": 0.5247,
+          "archRecall": 0.8,
+          "archRecallTarget": 1,
+          "rivals": {
+            "full_context": {
+              "tokens": 59543,
+              "roundTrips": 1,
+              "overheadMs": 35,
+              "snr": 0.0628
+            },
+            "vector_rag": {
+              "tokens": 3979,
+              "roundTrips": 3,
+              "overheadMs": 420,
+              "snr": 0.575
+            },
+            "fact_memory": {
+              "tokens": 1697,
+              "roundTrips": 4,
+              "overheadMs": 260,
+              "snr": 0.508
+            },
+            "subagent": {
+              "tokens": 4956,
+              "roundTrips": 6,
+              "overheadMs": 2800,
+              "snr": 0.4038
+            },
+            "skill_harness": {
+              "tokens": 1731,
+              "roundTrips": 3,
+              "overheadMs": 90,
+              "snr": 0.4991
+            }
+          }
+        },
+        {
+          "id": "fix_auth",
+          "category": "fix_bug",
+          "packetTokens": 648,
+          "slices": 3,
+          "sliceFiles": [
+            "src/core/tokens.ts:1-3",
+            "src/modules/auth/routes.ts:6-12",
+            "src/modules/auth/model.ts:10-45"
+          ],
+          "sliceHitsTarget": false,
+          "synthMs": 4.467,
+          "snr": 0.8657,
+          "archRecall": 0.8,
+          "archRecallTarget": 1,
+          "rivals": {
+            "full_context": {
+              "tokens": 59543,
+              "roundTrips": 1,
+              "overheadMs": 35,
+              "snr": 0.0719
+            },
+            "vector_rag": {
+              "tokens": 3836,
+              "roundTrips": 3,
+              "overheadMs": 420,
+              "snr": 0.575
+            },
+            "fact_memory": {
+              "tokens": 1877,
+              "roundTrips": 4,
+              "overheadMs": 260,
+              "snr": 0.5504
+            },
+            "subagent": {
+              "tokens": 4956,
+              "roundTrips": 6,
+              "overheadMs": 2800,
+              "snr": 0.4038
+            },
+            "skill_harness": {
+              "tokens": 1911,
+              "roundTrips": 3,
+              "overheadMs": 90,
+              "snr": 0.5464
+            }
+          }
+        }
+      ]
+    },
+    {
+      "files": 500,
+      "scannedFiles": 498,
+      "rawTokens": 195697,
+      "rawBytes": 721882,
+      "moduleCount": 123,
+      "buildMs": 123.9,
+      "genome": {
+        "c1": 28,
+        "c2": 22,
+        "c3": 3,
+        "c4": 489,
+        "c5": 3,
+        "total": 545
+      },
+      "genomeCapped": 545,
+      "genomeSample": {
+        "c1": "[C1|fw:express|svc:2|db:prisma|auth:jsonwebtoken|api:rest|test:vitest|ts:off|dirs:src/core,src/modules]",
+        "c2": "[C2|files:498|hubs:2] src/modules->src/core | src/core<-src/modules",
+        "c3": "[C3|pat:0] ",
+        "c4": "[C4|ptr:70] Db@src/core/db.ts:1-4 | httpGet@src/core/http.ts:1-5 | estimateTokens@src/core/tokens.ts:1-3 | AuditRow@src/modules/audit/model.ts:3-8 | Audit2Row@src/modules/audit2/model.ts:3-8 | Audit3Row@src/modules/audit3/model.ts:3-8 | Audit4Row@src/modules/audit4/model.ts:3-8 | Audit5Row@src/modules/audit5/model.ts:3-8 | AuthRow@src/modules/auth/model.ts:3-8 | Auth2Row@src/modules/auth2/model.ts:3-8 | Auth3Row@src/modules/auth3/model.ts:3-8 | Auth4Row@src/modules/auth4/model.ts:3-8 | Auth5Row@",
+        "c5": "[C5|less:0] "
+      },
+      "tasks": [
+        {
+          "id": "add_endpoint",
+          "category": "add_endpoint",
+          "packetTokens": 731,
+          "slices": 3,
+          "sliceFiles": [
+            "src/modules/flashcards/routes.ts:6-13",
+            "src/modules/flashcards/model.ts:10-50",
+            "src/modules/flashcards/index.ts:5-7"
+          ],
+          "sliceHitsTarget": true,
+          "synthMs": 25.31,
+          "snr": 0.5185,
+          "archRecall": 0.2698,
+          "archRecallTarget": 1,
+          "rivals": {
+            "full_context": {
+              "tokens": 198097,
+              "roundTrips": 1,
+              "overheadMs": 35,
+              "snr": 0.0188
+            },
+            "vector_rag": {
+              "tokens": 4927,
+              "roundTrips": 3,
+              "overheadMs": 420,
+              "snr": 0.575
+            },
+            "fact_memory": {
+              "tokens": 1692,
+              "roundTrips": 4,
+              "overheadMs": 260,
+              "snr": 0.5067
+            },
+            "subagent": {
+              "tokens": 4988,
+              "roundTrips": 6,
+              "overheadMs": 2800,
+              "snr": 0.4072
+            },
+            "skill_harness": {
+              "tokens": 1734,
+              "roundTrips": 3,
+              "overheadMs": 90,
+              "snr": 0.4976
+            }
+          }
+        },
+        {
+          "id": "fix_auth",
+          "category": "fix_bug",
+          "packetTokens": 650,
+          "slices": 3,
+          "sliceFiles": [
+            "src/core/tokens.ts:1-3",
+            "src/modules/auth/routes.ts:6-12",
+            "src/modules/auth/model.ts:10-46"
+          ],
+          "sliceHitsTarget": false,
+          "synthMs": 14.258,
+          "snr": 0.8615,
+          "archRecall": 0.2619,
+          "archRecallTarget": 1,
+          "rivals": {
+            "full_context": {
+              "tokens": 198097,
+              "roundTrips": 1,
+              "overheadMs": 35,
+              "snr": 0.0209
+            },
+            "vector_rag": {
+              "tokens": 3025,
+              "roundTrips": 3,
+              "overheadMs": 420,
+              "snr": 0.575
+            },
+            "fact_memory": {
+              "tokens": 1830,
+              "roundTrips": 4,
+              "overheadMs": 260,
+              "snr": 0.5402
+            },
+            "subagent": {
+              "tokens": 4988,
+              "roundTrips": 6,
+              "overheadMs": 2800,
+              "snr": 0.4072
+            },
+            "skill_harness": {
+              "tokens": 1872,
+              "roundTrips": 3,
+              "overheadMs": 90,
+              "snr": 0.5351
+            }
+          }
+        }
+      ]
+    },
+    {
+      "files": 1000,
+      "scannedFiles": 800,
+      "rawTokens": 392610,
+      "rawBytes": 1448483,
+      "moduleCount": 248,
+      "buildMs": 287.3,
+      "genome": {
+        "c1": 28,
+        "c2": 22,
+        "c3": 3,
+        "c4": 497,
+        "c5": 3,
+        "total": 553
+      },
+      "genomeCapped": 553,
+      "genomeSample": {
+        "c1": "[C1|fw:express|svc:2|db:prisma|auth:jsonwebtoken|api:rest|test:vitest|ts:off|dirs:src/core,src/modules]",
+        "c2": "[C2|files:800|hubs:2] src/modules->src/core | src/core<-src/modules",
+        "c3": "[C3|pat:0] ",
+        "c4": "[C4|ptr:70] Db@src/core/db.ts:1-4 | httpGet@src/core/http.ts:1-5 | estimateTokens@src/core/tokens.ts:1-3 | Audit10Row@src/modules/audit10/model.ts:3-8 | Audit2Row@src/modules/audit2/model.ts:3-8 | Audit3Row@src/modules/audit3/model.ts:3-8 | Audit4Row@src/modules/audit4/model.ts:3-8 | Audit5Row@src/modules/audit5/model.ts:3-8 | Audit6Row@src/modules/audit6/model.ts:3-8 | Audit7Row@src/modules/audit7/model.ts:3-8 | Audit8Row@src/modules/audit8/model.ts:3-8 | Audit9Row@src/modules/audit9/model.ts:3",
+        "c5": "[C5|less:0] "
+      },
+      "tasks": [
+        {
+          "id": "add_endpoint",
+          "category": "add_endpoint",
+          "packetTokens": 728,
+          "slices": 3,
+          "sliceFiles": [
+            "src/modules/flashcards/routes.ts:6-13",
+            "src/modules/flashcards/model.ts:10-50",
+            "src/modules/flashcards/index.ts:5-7"
+          ],
+          "sliceHitsTarget": true,
+          "synthMs": 7.7,
+          "snr": 0.5206,
+          "archRecall": 0.1434,
+          "archRecallTarget": 1,
+          "rivals": {
+            "full_context": {
+              "tokens": 395010,
+              "roundTrips": 1,
+              "overheadMs": 35,
+              "snr": 0.0095
+            },
+            "vector_rag": {
+              "tokens": 4881,
+              "roundTrips": 3,
+              "overheadMs": 420,
+              "snr": 0.575
+            },
+            "fact_memory": {
+              "tokens": 1701,
+              "roundTrips": 4,
+              "overheadMs": 260,
+              "snr": 0.5091
+            },
+            "subagent": {
+              "tokens": 4992,
+              "roundTrips": 6,
+              "overheadMs": 2800,
+              "snr": 0.4076
+            },
+            "skill_harness": {
+              "tokens": 1744,
+              "roundTrips": 3,
+              "overheadMs": 90,
+              "snr": 0.5003
+            }
+          }
+        },
+        {
+          "id": "fix_auth",
+          "category": "fix_bug",
+          "packetTokens": 645,
+          "slices": 3,
+          "sliceFiles": [
+            "src/core/tokens.ts:1-3",
+            "src/modules/auth/routes.ts:6-11",
+            "src/modules/auth/model.ts:10-44"
+          ],
+          "sliceHitsTarget": false,
+          "synthMs": 6.448,
+          "snr": 0.8682,
+          "archRecall": 0.1394,
+          "archRecallTarget": 1,
+          "rivals": {
+            "full_context": {
+              "tokens": 395010,
+              "roundTrips": 1,
+              "overheadMs": 35,
+              "snr": 0.0109
+            },
+            "vector_rag": {
+              "tokens": 3045,
+              "roundTrips": 3,
+              "overheadMs": 420,
+              "snr": 0.575
+            },
+            "fact_memory": {
+              "tokens": 1881,
+              "roundTrips": 4,
+              "overheadMs": 260,
+              "snr": 0.5513
+            },
+            "subagent": {
+              "tokens": 4992,
+              "roundTrips": 6,
+              "overheadMs": 2800,
+              "snr": 0.4076
+            },
+            "skill_harness": {
+              "tokens": 1924,
+              "roundTrips": 3,
+              "overheadMs": 90,
+              "snr": 0.5473
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bench2": {
+    "tasks": 100,
+    "ticks": [
+      {
+        "i": 0,
+        "session": "learn-0",
+        "category": "add_endpoint",
+        "followUp": false,
+        "chronosTokens": 672,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 381,
+        "skillLibraryTokens": 381,
+        "genomeTotal": 545
+      },
+      {
+        "i": 1,
+        "session": "learn-0",
+        "category": "add_endpoint",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 381,
+        "skillLibraryTokens": 381,
+        "genomeTotal": 545
+      },
+      {
+        "i": 2,
+        "session": "learn-1",
+        "category": "fix_bug",
+        "followUp": false,
+        "chronosTokens": 661,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 381,
+        "skillLibraryTokens": 381,
+        "genomeTotal": 545
+      },
+      {
+        "i": 3,
+        "session": "learn-1",
+        "category": "fix_bug",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 759,
+        "genomeTotal": 545
+      },
+      {
+        "i": 4,
+        "session": "learn-2",
+        "category": "schema_change",
+        "followUp": false,
+        "chronosTokens": 676,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 759,
+        "genomeTotal": 545
+      },
+      {
+        "i": 5,
+        "session": "learn-2",
+        "category": "schema_change",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 759,
+        "genomeTotal": 545
+      },
+      {
+        "i": 6,
+        "session": "learn-3",
+        "category": "ui_component",
+        "followUp": false,
+        "chronosTokens": 43,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 1141,
+        "genomeTotal": 545
+      },
+      {
+        "i": 7,
+        "session": "learn-3",
+        "category": "ui_component",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 1141,
+        "genomeTotal": 545
+      },
+      {
+        "i": 8,
+        "session": "learn-4",
+        "category": "test_suite",
+        "followUp": false,
+        "chronosTokens": 675,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 1141,
+        "genomeTotal": 545
+      },
+      {
+        "i": 9,
+        "session": "learn-4",
+        "category": "test_suite",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 381,
+        "skillLibraryTokens": 1522,
+        "genomeTotal": 545
+      },
+      {
+        "i": 10,
+        "session": "learn-5",
+        "category": "perf_opt",
+        "followUp": false,
+        "chronosTokens": 692,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 381,
+        "skillLibraryTokens": 1522,
+        "genomeTotal": 545
+      },
+      {
+        "i": 11,
+        "session": "learn-5",
+        "category": "perf_opt",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 381,
+        "skillLibraryTokens": 1522,
+        "genomeTotal": 545
+      },
+      {
+        "i": 12,
+        "session": "learn-6",
+        "category": "refactor",
+        "followUp": false,
+        "chronosTokens": 696,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 1900,
+        "genomeTotal": 545
+      },
+      {
+        "i": 13,
+        "session": "learn-6",
+        "category": "refactor",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 1900,
+        "genomeTotal": 545
+      },
+      {
+        "i": 14,
+        "session": "learn-7",
+        "category": "fix_auth",
+        "followUp": false,
+        "chronosTokens": 660,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 1900,
+        "genomeTotal": 545
+      },
+      {
+        "i": 15,
+        "session": "learn-7",
+        "category": "fix_auth",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 2278,
+        "genomeTotal": 545
+      },
+      {
+        "i": 16,
+        "session": "learn-8",
+        "category": "add_endpoint",
+        "followUp": false,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 2278,
+        "genomeTotal": 545
+      },
+      {
+        "i": 17,
+        "session": "learn-8",
+        "category": "add_endpoint",
+        "followUp": true,
+        "chronosTokens": 692,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 2278,
+        "genomeTotal": 545
+      },
+      {
+        "i": 18,
+        "session": "learn-9",
+        "category": "fix_bug",
+        "followUp": false,
+        "chronosTokens": 680,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 379,
+        "skillLibraryTokens": 2656,
+        "genomeTotal": 545
+      },
+      {
+        "i": 19,
+        "session": "learn-9",
+        "category": "fix_bug",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 379,
+        "skillLibraryTokens": 2656,
+        "genomeTotal": 545
+      },
+      {
+        "i": 20,
+        "session": "learn-10",
+        "category": "schema_change",
+        "followUp": false,
+        "chronosTokens": 697,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 379,
+        "skillLibraryTokens": 2656,
+        "genomeTotal": 545
+      },
+      {
+        "i": 21,
+        "session": "learn-10",
+        "category": "schema_change",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3040,
+        "genomeTotal": 545
+      },
+      {
+        "i": 22,
+        "session": "learn-11",
+        "category": "ui_component",
+        "followUp": false,
+        "chronosTokens": 63,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3040,
+        "genomeTotal": 545
+      },
+      {
+        "i": 23,
+        "session": "learn-11",
+        "category": "ui_component",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3040,
+        "genomeTotal": 545
+      },
+      {
+        "i": 24,
+        "session": "learn-12",
+        "category": "test_suite",
+        "followUp": false,
+        "chronosTokens": 695,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3421,
+        "genomeTotal": 545
+      },
+      {
+        "i": 25,
+        "session": "learn-12",
+        "category": "test_suite",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3421,
+        "genomeTotal": 545
+      },
+      {
+        "i": 26,
+        "session": "learn-13",
+        "category": "perf_opt",
+        "followUp": false,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3421,
+        "genomeTotal": 545
+      },
+      {
+        "i": 27,
+        "session": "learn-13",
+        "category": "perf_opt",
+        "followUp": true,
+        "chronosTokens": 711,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3421,
+        "genomeTotal": 545
+      },
+      {
+        "i": 28,
+        "session": "learn-14",
+        "category": "refactor",
+        "followUp": false,
+        "chronosTokens": 715,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3421,
+        "genomeTotal": 545
+      },
+      {
+        "i": 29,
+        "session": "learn-14",
+        "category": "refactor",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3421,
+        "genomeTotal": 545
+      },
+      {
+        "i": 30,
+        "session": "learn-15",
+        "category": "fix_auth",
+        "followUp": false,
+        "chronosTokens": 660,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3799,
+        "genomeTotal": 545
+      },
+      {
+        "i": 31,
+        "session": "learn-15",
+        "category": "fix_auth",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3799,
+        "genomeTotal": 545
+      },
+      {
+        "i": 32,
+        "session": "learn-16",
+        "category": "add_endpoint",
+        "followUp": false,
+        "chronosTokens": 692,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 3799,
+        "genomeTotal": 545
+      },
+      {
+        "i": 33,
+        "session": "learn-16",
+        "category": "add_endpoint",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 4180,
+        "genomeTotal": 545
+      },
+      {
+        "i": 34,
+        "session": "learn-17",
+        "category": "fix_bug",
+        "followUp": false,
+        "chronosTokens": 680,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 4180,
+        "genomeTotal": 545
+      },
+      {
+        "i": 35,
+        "session": "learn-17",
+        "category": "fix_bug",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 4180,
+        "genomeTotal": 545
+      },
+      {
+        "i": 36,
+        "session": "learn-18",
+        "category": "schema_change",
+        "followUp": false,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 4564,
+        "genomeTotal": 545
+      },
+      {
+        "i": 37,
+        "session": "learn-18",
+        "category": "schema_change",
+        "followUp": true,
+        "chronosTokens": 697,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 4564,
+        "genomeTotal": 545
+      },
+      {
+        "i": 38,
+        "session": "learn-19",
+        "category": "ui_component",
+        "followUp": false,
+        "chronosTokens": 63,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 4564,
+        "genomeTotal": 545
+      },
+      {
+        "i": 39,
+        "session": "learn-19",
+        "category": "ui_component",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 4946,
+        "genomeTotal": 545
+      },
+      {
+        "i": 40,
+        "session": "learn-20",
+        "category": "test_suite",
+        "followUp": false,
+        "chronosTokens": 695,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 4946,
+        "genomeTotal": 545
+      },
+      {
+        "i": 41,
+        "session": "learn-20",
+        "category": "test_suite",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 4946,
+        "genomeTotal": 545
+      },
+      {
+        "i": 42,
+        "session": "learn-21",
+        "category": "perf_opt",
+        "followUp": false,
+        "chronosTokens": 711,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 5324,
+        "genomeTotal": 545
+      },
+      {
+        "i": 43,
+        "session": "learn-21",
+        "category": "perf_opt",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 5324,
+        "genomeTotal": 545
+      },
+      {
+        "i": 44,
+        "session": "learn-22",
+        "category": "refactor",
+        "followUp": false,
+        "chronosTokens": 715,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 5324,
+        "genomeTotal": 545
+      },
+      {
+        "i": 45,
+        "session": "learn-22",
+        "category": "refactor",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 5702,
+        "genomeTotal": 545
+      },
+      {
+        "i": 46,
+        "session": "learn-23",
+        "category": "fix_auth",
+        "followUp": false,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 5702,
+        "genomeTotal": 545
+      },
+      {
+        "i": 47,
+        "session": "learn-23",
+        "category": "fix_auth",
+        "followUp": true,
+        "chronosTokens": 660,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 5702,
+        "genomeTotal": 545
+      },
+      {
+        "i": 48,
+        "session": "learn-24",
+        "category": "add_endpoint",
+        "followUp": false,
+        "chronosTokens": 692,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 6083,
+        "genomeTotal": 545
+      },
+      {
+        "i": 49,
+        "session": "learn-24",
+        "category": "add_endpoint",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 6083,
+        "genomeTotal": 545
+      },
+      {
+        "i": 50,
+        "session": "learn-25",
+        "category": "fix_bug",
+        "followUp": false,
+        "chronosTokens": 680,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 6083,
+        "genomeTotal": 545
+      },
+      {
+        "i": 51,
+        "session": "learn-25",
+        "category": "fix_bug",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 6461,
+        "genomeTotal": 545
+      },
+      {
+        "i": 52,
+        "session": "learn-26",
+        "category": "schema_change",
+        "followUp": false,
+        "chronosTokens": 697,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 6461,
+        "genomeTotal": 545
+      },
+      {
+        "i": 53,
+        "session": "learn-26",
+        "category": "schema_change",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 6461,
+        "genomeTotal": 545
+      },
+      {
+        "i": 54,
+        "session": "learn-27",
+        "category": "ui_component",
+        "followUp": false,
+        "chronosTokens": 63,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 6843,
+        "genomeTotal": 545
+      },
+      {
+        "i": 55,
+        "session": "learn-27",
+        "category": "ui_component",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 6843,
+        "genomeTotal": 545
+      },
+      {
+        "i": 56,
+        "session": "learn-28",
+        "category": "test_suite",
+        "followUp": false,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 6843,
+        "genomeTotal": 545
+      },
+      {
+        "i": 57,
+        "session": "learn-28",
+        "category": "test_suite",
+        "followUp": true,
+        "chronosTokens": 695,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 7224,
+        "genomeTotal": 545
+      },
+      {
+        "i": 58,
+        "session": "learn-29",
+        "category": "perf_opt",
+        "followUp": false,
+        "chronosTokens": 711,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 7224,
+        "genomeTotal": 545
+      },
+      {
+        "i": 59,
+        "session": "learn-29",
+        "category": "perf_opt",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 7224,
+        "genomeTotal": 545
+      },
+      {
+        "i": 60,
+        "session": "learn-30",
+        "category": "refactor",
+        "followUp": false,
+        "chronosTokens": 715,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 7224,
+        "genomeTotal": 545
+      },
+      {
+        "i": 61,
+        "session": "learn-30",
+        "category": "refactor",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 7224,
+        "genomeTotal": 545
+      },
+      {
+        "i": 62,
+        "session": "learn-31",
+        "category": "fix_auth",
+        "followUp": false,
+        "chronosTokens": 660,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 380,
+        "skillLibraryTokens": 7224,
+        "genomeTotal": 545
+      },
+      {
+        "i": 63,
+        "session": "learn-31",
+        "category": "fix_auth",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 7602,
+        "genomeTotal": 545
+      },
+      {
+        "i": 64,
+        "session": "learn-32",
+        "category": "add_endpoint",
+        "followUp": false,
+        "chronosTokens": 692,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 7602,
+        "genomeTotal": 545
+      },
+      {
+        "i": 65,
+        "session": "learn-32",
+        "category": "add_endpoint",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 7602,
+        "genomeTotal": 545
+      },
+      {
+        "i": 66,
+        "session": "learn-33",
+        "category": "fix_bug",
+        "followUp": false,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 7980,
+        "genomeTotal": 545
+      },
+      {
+        "i": 67,
+        "session": "learn-33",
+        "category": "fix_bug",
+        "followUp": true,
+        "chronosTokens": 680,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 7980,
+        "genomeTotal": 545
+      },
+      {
+        "i": 68,
+        "session": "learn-34",
+        "category": "schema_change",
+        "followUp": false,
+        "chronosTokens": 697,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 7980,
+        "genomeTotal": 545
+      },
+      {
+        "i": 69,
+        "session": "learn-34",
+        "category": "schema_change",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 8364,
+        "genomeTotal": 545
+      },
+      {
+        "i": 70,
+        "session": "learn-35",
+        "category": "ui_component",
+        "followUp": false,
+        "chronosTokens": 63,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 8364,
+        "genomeTotal": 545
+      },
+      {
+        "i": 71,
+        "session": "learn-35",
+        "category": "ui_component",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 8364,
+        "genomeTotal": 545
+      },
+      {
+        "i": 72,
+        "session": "learn-36",
+        "category": "test_suite",
+        "followUp": false,
+        "chronosTokens": 695,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 8745,
+        "genomeTotal": 545
+      },
+      {
+        "i": 73,
+        "session": "learn-36",
+        "category": "test_suite",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 8745,
+        "genomeTotal": 545
+      },
+      {
+        "i": 74,
+        "session": "learn-37",
+        "category": "perf_opt",
+        "followUp": false,
+        "chronosTokens": 711,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 8745,
+        "genomeTotal": 545
+      },
+      {
+        "i": 75,
+        "session": "learn-37",
+        "category": "perf_opt",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 9123,
+        "genomeTotal": 545
+      },
+      {
+        "i": 76,
+        "session": "learn-38",
+        "category": "refactor",
+        "followUp": false,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 9123,
+        "genomeTotal": 545
+      },
+      {
+        "i": 77,
+        "session": "learn-38",
+        "category": "refactor",
+        "followUp": true,
+        "chronosTokens": 715,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 9123,
+        "genomeTotal": 545
+      },
+      {
+        "i": 78,
+        "session": "learn-39",
+        "category": "fix_auth",
+        "followUp": false,
+        "chronosTokens": 660,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 9501,
+        "genomeTotal": 545
+      },
+      {
+        "i": 79,
+        "session": "learn-39",
+        "category": "fix_auth",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 9501,
+        "genomeTotal": 545
+      },
+      {
+        "i": 80,
+        "session": "learn-40",
+        "category": "add_endpoint",
+        "followUp": false,
+        "chronosTokens": 692,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 9501,
+        "genomeTotal": 545
+      },
+      {
+        "i": 81,
+        "session": "learn-40",
+        "category": "add_endpoint",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 9882,
+        "genomeTotal": 545
+      },
+      {
+        "i": 82,
+        "session": "learn-41",
+        "category": "fix_bug",
+        "followUp": false,
+        "chronosTokens": 680,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 9882,
+        "genomeTotal": 545
+      },
+      {
+        "i": 83,
+        "session": "learn-41",
+        "category": "fix_bug",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 9882,
+        "genomeTotal": 545
+      },
+      {
+        "i": 84,
+        "session": "learn-42",
+        "category": "schema_change",
+        "followUp": false,
+        "chronosTokens": 697,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 10266,
+        "genomeTotal": 545
+      },
+      {
+        "i": 85,
+        "session": "learn-42",
+        "category": "schema_change",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 10266,
+        "genomeTotal": 545
+      },
+      {
+        "i": 86,
+        "session": "learn-43",
+        "category": "ui_component",
+        "followUp": false,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 10266,
+        "genomeTotal": 545
+      },
+      {
+        "i": 87,
+        "session": "learn-43",
+        "category": "ui_component",
+        "followUp": true,
+        "chronosTokens": 63,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 761,
+        "skillLibraryTokens": 10648,
+        "genomeTotal": 545
+      },
+      {
+        "i": 88,
+        "session": "learn-44",
+        "category": "test_suite",
+        "followUp": false,
+        "chronosTokens": 695,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 761,
+        "skillLibraryTokens": 10648,
+        "genomeTotal": 545
+      },
+      {
+        "i": 89,
+        "session": "learn-44",
+        "category": "test_suite",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 761,
+        "skillLibraryTokens": 10648,
+        "genomeTotal": 545
+      },
+      {
+        "i": 90,
+        "session": "learn-45",
+        "category": "perf_opt",
+        "followUp": false,
+        "chronosTokens": 711,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11026,
+        "genomeTotal": 545
+      },
+      {
+        "i": 91,
+        "session": "learn-45",
+        "category": "perf_opt",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11026,
+        "genomeTotal": 545
+      },
+      {
+        "i": 92,
+        "session": "learn-46",
+        "category": "refactor",
+        "followUp": false,
+        "chronosTokens": 715,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11026,
+        "genomeTotal": 545
+      },
+      {
+        "i": 93,
+        "session": "learn-46",
+        "category": "refactor",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11026,
+        "genomeTotal": 545
+      },
+      {
+        "i": 94,
+        "session": "learn-47",
+        "category": "fix_auth",
+        "followUp": false,
+        "chronosTokens": 660,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11026,
+        "genomeTotal": 545
+      },
+      {
+        "i": 95,
+        "session": "learn-47",
+        "category": "fix_auth",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11026,
+        "genomeTotal": 545
+      },
+      {
+        "i": 96,
+        "session": "learn-48",
+        "category": "add_endpoint",
+        "followUp": false,
+        "chronosTokens": 0,
+        "attributed": "no context",
+        "interceptorFired": true,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11407,
+        "genomeTotal": 545
+      },
+      {
+        "i": 97,
+        "session": "learn-48",
+        "category": "add_endpoint",
+        "followUp": true,
+        "chronosTokens": 692,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11407,
+        "genomeTotal": 545
+      },
+      {
+        "i": 98,
+        "session": "learn-49",
+        "category": "fix_bug",
+        "followUp": false,
+        "chronosTokens": 680,
+        "attributed": "packet",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11407,
+        "genomeTotal": 545
+      },
+      {
+        "i": 99,
+        "session": "learn-49",
+        "category": "fix_bug",
+        "followUp": true,
+        "chronosTokens": 0,
+        "attributed": "working-set gate",
+        "interceptorFired": false,
+        "skillInjectedTokens": 760,
+        "skillLibraryTokens": 11785,
+        "genomeTotal": 545
+      }
+    ],
+    "audits": [
+      {
+        "at": 10,
+        "pruned": 1,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7384,
+        "clamped": 0
+      },
+      {
+        "at": 20,
+        "pruned": 1,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7360,
+        "clamped": 0
+      },
+      {
+        "at": 30,
+        "pruned": 1,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7360,
+        "clamped": 0
+      },
+      {
+        "at": 40,
+        "pruned": 1,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7360,
+        "clamped": 0
+      },
+      {
+        "at": 50,
+        "pruned": 1,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7360,
+        "clamped": 0
+      },
+      {
+        "at": 60,
+        "pruned": 0,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7360,
+        "clamped": 0
+      },
+      {
+        "at": 70,
+        "pruned": 1,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7360,
+        "clamped": 0
+      },
+      {
+        "at": 80,
+        "pruned": 1,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7360,
+        "clamped": 0
+      },
+      {
+        "at": 90,
+        "pruned": 1,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7360,
+        "clamped": 0
+      },
+      {
+        "at": 100,
+        "pruned": 1,
+        "lessonsDeleted": 0,
+        "decayedPointers": 7360,
+        "clamped": 0
+      }
+    ],
+    "finalGenome": {
+      "c1": 28,
+      "c2": 22,
+      "c3": 3,
+      "c4": 489,
+      "c5": 3,
+      "total": 545
+    },
+    "learnedPatterns": 7,
+    "interceptorActive": 1,
+    "interceptorStats": {
+      "total": 1,
+      "active": 1,
+      "hits": 20
+    },
+    "interceptorActivatedAt": 11,
+    "interceptorFiredTasks": 17,
+    "skillFiles": 31,
+    "skillLibraryTokens": 11785,
+    "chronosSum": 30712,
+    "skillSum": 52066,
+    "cliRuleTokens": {
+      "chronos": 0,
+      "skillHarness": 8000
+    },
+    "zeroTokenTasks": 29,
+    "first10Avg": 273,
+    "last10Avg": 346,
+    "first10AvgRival": 380,
+    "last10AvgRival": 760
+  },
+  "bench3": {
+    "greetingText": "[CHRONOS_DNA] [DNA|]\n[CHRONOS_PULSE] [now:2026-10-17T04:05Z|recent_projects:eduflash:just_now[focus:flashcard flip animation,open:lag when flipping many c]]\n[CHRONOS_BEHAVIOR] persistent memory on. Greeting (\"hi\",\"chào\",\"alo\")-> warm reply, ask about newest project in PULSE (focus/open). Work-> act now, obey DNA. Past details-> call tool `chronos`.\n[CHRONOS_CORTEX] Execution Protocol: [REFLEX] fast-paths; skip exploration; verify via project script.",
+    "greetingTokens": 119,
+    "namesProject": true,
+    "namesOpenLoop": true,
+    "snapshotMs": 1.731,
+    "turns": 20,
+    "uniquePrefixHashes": 1,
+    "promptCacheHitPct": 100,
+    "gateHi": 0,
+    "gateTaskFirst": 731,
+    "gateTaskFirstSlices": 3,
+    "gateTaskRepeat": 0,
+    "categoryWithoutPointerHit": {
+      "tokens": 45,
+      "slices": 0,
+      "pointerHits": 0
+    },
+    "rivals": [
+      {
+        "id": "full_context",
+        "label": "Full-Context + Static .md Rules",
+        "greetingTokens": 197919,
+        "identifiesProject": false,
+        "identifiesOpenLoop": false
+      },
+      {
+        "id": "vector_rag",
+        "label": "Standard Vector RAG (Top-K)",
+        "greetingTokens": 0,
+        "identifiesProject": false,
+        "identifiesOpenLoop": false
+      },
+      {
+        "id": "fact_memory",
+        "label": "Cloud Fact Memory (Mem0 / Letta)",
+        "greetingTokens": 1250,
+        "identifiesProject": true,
+        "identifiesOpenLoop": true
+      },
+      {
+        "id": "subagent",
+        "label": "Sub-Agent Codebase Explorer",
+        "greetingTokens": 0,
+        "identifiesProject": false,
+        "identifiesOpenLoop": false
+      },
+      {
+        "id": "skill_harness",
+        "label": "Auto-Generated SKILL.md Harness",
+        "greetingTokens": 180,
+        "identifiesProject": false,
+        "identifiesOpenLoop": false
+      }
+    ]
+  },
+  "bench4": {
+    "reps": 300,
+    "chronos": {
+      "genome_build": {
+        "p50": 244.851,
+        "p95": 315.333,
+        "max": 315.333
+      },
+      "synth": {
+        "p50": 5.475,
+        "p95": 13.271,
+        "max": 26.682
+      },
+      "pointer_search": {
+        "p50": 0.56,
+        "p95": 0.864,
+        "max": 1.022
+      },
+      "gate": {
+        "p50": 0.072,
+        "p95": 0.13,
+        "max": 0.738
+      },
+      "reflex_gate": {
+        "p50": 0.144,
+        "p95": 0.235,
+        "max": 0.976
+      },
+      "snapshot": {
+        "p50": 0.217,
+        "p95": 0.382,
+        "max": 1.091
+      },
+      "intercept": {
+        "p50": 0.008,
+        "p95": 0.022,
+        "max": 0.156
+      },
+      "dna": {
+        "p50": 0.017,
+        "p95": 0.034,
+        "max": 0.06
+      }
+    },
+    "buildMs": {
+      "50": 41.3,
+      "150": 45.5,
+      "500": 123.9,
+      "1000": 287.3
+    },
+    "prefill": {
+      "tokPerSec": 2114.6,
+      "promptTokens": 4098,
+      "probes": [
+        2114.6,
+        2124.4,
+        2121.6
+      ],
+      "source": "measured on this machine (ollama qwen2.5:3b q4, CPU-only, slowest of 3 nonce-unique probes)",
+      "gpuClassTokPerSec": 3000
+    },
+    "rivals": [
+      {
+        "id": "full_context",
+        "label": "Full-Context + Static .md Rules",
+        "tokens": 197919,
+        "overheadMs": 35,
+        "prefillMs": 93596.4,
+        "totalMs": 93631.4
+      },
+      {
+        "id": "vector_rag",
+        "label": "Standard Vector RAG (Top-K)",
+        "tokens": 3029,
+        "overheadMs": 420,
+        "prefillMs": 1432.4,
+        "totalMs": 1852.4
+      },
+      {
+        "id": "fact_memory",
+        "label": "Cloud Fact Memory (Mem0 / Letta)",
+        "tokens": 1856,
+        "overheadMs": 260,
+        "prefillMs": 877.7,
+        "totalMs": 1137.7
+      },
+      {
+        "id": "subagent",
+        "label": "Sub-Agent Codebase Explorer",
+        "tokens": 4988,
+        "overheadMs": 2800,
+        "prefillMs": 2358.8,
+        "totalMs": 5158.8
+      },
+      {
+        "id": "skill_harness",
+        "label": "Auto-Generated SKILL.md Harness",
+        "tokens": 1898,
+        "overheadMs": 90,
+        "prefillMs": 897.6,
+        "totalMs": 987.6
+      }
+    ]
+  },
+  "bench5": {
+    "chronos": {
+      "sliceCoverage": 0.5,
+      "archRecallFull": 0.2659,
+      "archRecallTarget": 1,
+      "lessonRetention": 1,
+      "liveLessons": 1,
+      "learnedPatterns": 7,
+      "snr": 0.69,
+      "avgPacketTokens": 691
+    },
+    "rivals": [
+      {
+        "id": "full_context",
+        "label": "Full-Context + Static .md Rules",
+        "sliceCoverage": 1,
+        "archRecall": 1,
+        "archRecallFull": 1,
+        "lessonRetention": 1,
+        "snr": 0.0186,
+        "tokens": 197919,
+        "success": 80.4
+      },
+      {
+        "id": "vector_rag",
+        "label": "Standard Vector RAG (Top-K)",
+        "sliceCoverage": 1,
+        "archRecall": 1,
+        "archRecallFull": 0.0813,
+        "lessonRetention": 0,
+        "snr": 0.575,
+        "tokens": 4866,
+        "success": 76.5
+      },
+      {
+        "id": "fact_memory",
+        "label": "Cloud Fact Memory (Mem0 / Letta)",
+        "sliceCoverage": 1,
+        "archRecall": 1,
+        "archRecallFull": 0.2,
+        "lessonRetention": 1,
+        "snr": 0.502,
+        "tokens": 1674,
+        "success": 90
+      },
+      {
+        "id": "subagent",
+        "label": "Sub-Agent Codebase Explorer",
+        "sliceCoverage": 1,
+        "archRecall": 1,
+        "archRecallFull": 0.4,
+        "lessonRetention": 0,
+        "snr": 0.4072,
+        "tokens": 4988,
+        "success": 73.1
+      },
+      {
+        "id": "skill_harness",
+        "label": "Auto-Generated SKILL.md Harness",
+        "sliceCoverage": 1,
+        "archRecall": 1,
+        "archRecallFull": 0.25,
+        "lessonRetention": 1,
+        "snr": 0.4921,
+        "tokens": 1716,
+        "success": 89.8
+      }
+    ],
+    "sliceHits": [
+      {
+        "files": 50,
+        "detail": [
+          {
+            "id": "add_endpoint",
+            "hit": true,
+            "slices": [
+              "src/modules/flashcards/routes.ts:6-11",
+              "src/modules/flashcards/model.ts:10-48",
+              "src/modules/flashcards/index.ts:5-7"
+            ]
+          },
+          {
+            "id": "fix_auth",
+            "hit": false,
+            "slices": [
+              "src/core/tokens.ts:1-3",
+              "src/modules/auth/routes.ts:6-12",
+              "src/modules/auth/model.ts:10-47"
+            ]
+          }
+        ],
+        "coverage": 0.5
+      },
+      {
+        "files": 150,
+        "detail": [
+          {
+            "id": "add_endpoint",
+            "hit": true,
+            "slices": [
+              "src/modules/flashcards/routes.ts:6-13",
+              "src/modules/flashcards/model.ts:10-45",
+              "src/modules/flashcards/index.ts:5-7"
+            ]
+          },
+          {
+            "id": "fix_auth",
+            "hit": false,
+            "slices": [
+              "src/core/tokens.ts:1-3",
+              "src/modules/auth/routes.ts:6-12",
+              "src/modules/auth/model.ts:10-45"
+            ]
+          }
+        ],
+        "coverage": 0.5
+      },
+      {
+        "files": 500,
+        "detail": [
+          {
+            "id": "add_endpoint",
+            "hit": true,
+            "slices": [
+              "src/modules/flashcards/routes.ts:6-13",
+              "src/modules/flashcards/model.ts:10-50",
+              "src/modules/flashcards/index.ts:5-7"
+            ]
+          },
+          {
+            "id": "fix_auth",
+            "hit": false,
+            "slices": [
+              "src/core/tokens.ts:1-3",
+              "src/modules/auth/routes.ts:6-12",
+              "src/modules/auth/model.ts:10-46"
+            ]
+          }
+        ],
+        "coverage": 0.5
+      },
+      {
+        "files": 1000,
+        "detail": [
+          {
+            "id": "add_endpoint",
+            "hit": true,
+            "slices": [
+              "src/modules/flashcards/routes.ts:6-13",
+              "src/modules/flashcards/model.ts:10-50",
+              "src/modules/flashcards/index.ts:5-7"
+            ]
+          },
+          {
+            "id": "fix_auth",
+            "hit": false,
+            "slices": [
+              "src/core/tokens.ts:1-3",
+              "src/modules/auth/routes.ts:6-11",
+              "src/modules/auth/model.ts:10-44"
+            ]
+          }
+        ],
+        "coverage": 0.5
+      }
+    ]
+  },
+  "scorecard": {
+    "lines": [
+      {
+        "id": "chronos_v4",
+        "label": "Chronos-Palace v4.0 (OMEGA-GENOME)",
+        "tokens500": 691,
+        "cacheHitPct": 100,
+        "greetingTokens": 119,
+        "episodicContinuity": true,
+        "zeroTokenLearning": true,
+        "roiGovernance": true,
+        "latencyMs": 5.475,
+        "snr": 0.69,
+        "successRate": 73.8,
+        "totalMs": 332.3,
+        "efficiency": 106.8
+      },
+      {
+        "id": "full_context",
+        "label": "Full-Context + Static .md Rules",
+        "tokens500": 198097,
+        "cacheHitPct": 60,
+        "greetingTokens": 197919,
+        "episodicContinuity": false,
+        "zeroTokenLearning": false,
+        "roiGovernance": false,
+        "latencyMs": 35,
+        "snr": 0.0186,
+        "successRate": 80.4,
+        "totalMs": 93631.4,
+        "efficiency": 0.41
+      },
+      {
+        "id": "vector_rag",
+        "label": "Standard Vector RAG (Top-K)",
+        "tokens500": 4927,
+        "cacheHitPct": 20,
+        "greetingTokens": 0,
+        "episodicContinuity": false,
+        "zeroTokenLearning": false,
+        "roiGovernance": false,
+        "latencyMs": 420,
+        "snr": 0.575,
+        "successRate": 76.5,
+        "totalMs": 1852.4,
+        "efficiency": 15.53
+      },
+      {
+        "id": "fact_memory",
+        "label": "Cloud Fact Memory (Mem0 / Letta)",
+        "tokens500": 1692,
+        "cacheHitPct": 50,
+        "greetingTokens": 1250,
+        "episodicContinuity": false,
+        "zeroTokenLearning": false,
+        "roiGovernance": false,
+        "latencyMs": 260,
+        "snr": 0.502,
+        "successRate": 90,
+        "totalMs": 1137.7,
+        "efficiency": 53.19
+      },
+      {
+        "id": "subagent",
+        "label": "Sub-Agent Codebase Explorer",
+        "tokens500": 4988,
+        "cacheHitPct": 10,
+        "greetingTokens": 0,
+        "episodicContinuity": false,
+        "zeroTokenLearning": false,
+        "roiGovernance": false,
+        "latencyMs": 2800,
+        "snr": 0.4072,
+        "successRate": 73.1,
+        "totalMs": 5158.8,
+        "efficiency": 14.66
+      },
+      {
+        "id": "skill_harness",
+        "label": "Auto-Generated SKILL.md Harness",
+        "tokens500": 1734,
+        "cacheHitPct": 40,
+        "greetingTokens": 180,
+        "episodicContinuity": false,
+        "zeroTokenLearning": false,
+        "roiGovernance": false,
+        "latencyMs": 90,
+        "snr": 0.4921,
+        "successRate": 89.8,
+        "totalMs": 987.6,
+        "efficiency": 51.79
+      }
+    ],
+    "wins": {
+      "chronos_v4": 9,
+      "full_context": 0,
+      "vector_rag": 1,
+      "fact_memory": 1,
+      "subagent": 1,
+      "skill_harness": 0
+    },
+    "winnerBy": {
+      "Context tokens per task @500 files": {
+        "winner": "chronos_v4",
+        "others": [
+          691
+        ]
+      },
+      "Prompt-cache-stable prefix %": {
+        "winner": "chronos_v4",
+        "others": [
+          100
+        ]
+      },
+      "\"hi\" greeting tokens": {
+        "winner": "vector_rag = subagent",
+        "others": [
+          0,
+          0
+        ]
+      },
+      "Task success rate": {
+        "winner": "fact_memory",
+        "others": [
+          90
+        ]
+      },
+      "Signal-to-noise ratio": {
+        "winner": "chronos_v4",
+        "others": [
+          0.69
+        ]
+      },
+      "Synthesis overhead (ms)": {
+        "winner": "chronos_v4",
+        "others": [
+          5.475
+        ]
+      },
+      "End-to-end task latency (ms)": {
+        "winner": "chronos_v4",
+        "others": [
+          332.3
+        ]
+      },
+      "Success per 1k context tokens": {
+        "winner": "chronos_v4",
+        "others": [
+          106.8
+        ]
+      },
+      "episodicContinuity": {
+        "winner": "chronos_v4",
+        "others": []
+      },
+      "zeroTokenLearning": {
+        "winner": "chronos_v4",
+        "others": []
+      },
+      "roiGovernance": {
+        "winner": "chronos_v4",
+        "others": []
+      }
+    },
+    "criteria": 11
+  }
+}

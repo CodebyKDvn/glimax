@@ -1,0 +1,82 @@
+{
+ "bench": "memorybench",
+ "stamp": "2026-10-18T09-02-55-371Z",
+ "samples": 213,
+ "questions": 213,
+ "scored": 213,
+ "aggregate": {
+  "graph": {
+   "n": 213,
+   "r1": 0.215962441314554,
+   "r5": 0.9084507042253521,
+   "r10": 0.9178403755868545,
+   "r50": 0.9178403755868545,
+   "mrr": 0.539280125195618,
+   "p1": null,
+   "p10": null,
+   "hasPresence": false,
+   "p50ms": 3.728774,
+   "p95ms": 6.380411
+  },
+  "verbatim": {
+   "n": 213,
+   "r1": 0.647887323943662,
+   "r5": 0.9061032863849765,
+   "r10": 0.9061032863849765,
+   "r50": 0.9061032863849765,
+   "mrr": 0.8046948356807512,
+   "p1": null,
+   "p10": null,
+   "hasPresence": false,
+   "p50ms": 10.391015,
+   "p95ms": 17.518742
+  },
+  "union": {
+   "n": 213,
+   "r1": 0.22535211267605634,
+   "r5": 0.9131455399061033,
+   "r10": 0.9225352112676056,
+   "r50": 0.9225352112676056,
+   "mrr": 0.5472613458528949,
+   "p1": null,
+   "p10": null,
+   "hasPresence": false,
+   "p50ms": 14.339822999999999,
+   "p95ms": 23.983210999999997
+  },
+  "product": {
+   "n": 213,
+   "r1": 0.22535211267605634,
+   "r5": 0.9131455399061033,
+   "r10": 0.9225352112676056,
+   "r50": 0.9225352112676056,
+   "mrr": 0.5472613458528949,
+   "p1": null,
+   "p10": null,
+   "hasPresence": false,
+   "p50ms": 12.0315,
+   "p95ms": 19.541556,
+   "tokensMean": 229.4600938967136,
+   "tokensP95": 247
+  }
+ },
+ "lines": [
+  "memorybench — Chronos-Palace v4.1 · retrieval level · 213 samples · 213 questions (213 scoreable: 213 structural + 0 presence-only; 0 without gold)",
+  "ingested: 1183 turns → 1388 edges / 1388 L3 rows (33493.35ms total)\n",
+  "note: r1..r50 here = fraction of required gold EVIDENCE items (turns/sessions) found in top-k of retrieved turns.",
+  "",
+  "| channel | R@1 | R@5 | R@10 | R@50 | MRR | p50 ms | p95 ms |",
+  "|---------|----:|----:|-----:|-----:|----:|-------:|-------:|",
+  "| graph   | 21.6% | 90.85% | 91.78% | 91.78% | 0.54 | 3.73 | 6.38 |",
+  "| verbatim | 64.79% | 90.61% | 90.61% | 90.61% | 0.8 | 10.39 | 17.52 |",
+  "| union   | 22.54% | 91.31% | 92.25% | — | 0.55 | 14.34 | 23.98 |",
+  "| product | 22.54% | 91.31% | 92.25% | — | 0.55 | 12.03 | 19.54 |",
+  "\npareto check (v4.1): union R@10 92.25% ≥ max(graph 91.78%, verbatim 90.61%) → PASS; product R@10 92.25% → PASS",
+  "\nper type (R@10 / MRR):",
+  "| type | n | graph | verbatim | union | product |",
+  "|------|--:|------:|---------:|------:|--------:|",
+  "| LexEval-QA | 25 | 30% / 0.12 | 20% / 0.13 | 34% / 0.18 | 34% / 0.18 |",
+  "| LimitGen-Syn | 188 | 100% / 0.6 | 100% / 0.89 | 100% / 0.6 | 100% / 0.6 |",
+  "\nproduct packet: mean 229.5 tok · p95 247 tok · \"nothing remembered\": 0/213"
+ ]
+}

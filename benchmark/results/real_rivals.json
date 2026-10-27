@@ -1,0 +1,418 @@
+{
+  "generatedAt": "2026-10-17T04:42:57.878Z",
+  "project": {
+    "name": "bench-p500",
+    "files": 500,
+    "rawTokens": 195697,
+    "modules": 126
+  },
+  "memories": 130,
+  "tasks": [
+    {
+      "id": "fix_auth",
+      "text": "fix the auth bug in token verification",
+      "target": "src/modules/auth/service.ts",
+      "module": "auth",
+      "targetTokens": 580
+    },
+    {
+      "id": "add_endpoint",
+      "text": "add a new endpoint for flashcards to the api",
+      "target": "src/modules/flashcards/routes.ts",
+      "module": "flashcards",
+      "targetTokens": 442
+    }
+  ],
+  "chronos": null,
+  "chronosSliceCoverage": 0.5,
+  "rows": [
+    {
+      "id": "simple_memory",
+      "label": "Simple Memory (Knikolov)",
+      "method": "executed",
+      "exec": "real plugin: server({autoLoad:true}) → memory_remember × 130 + chat.message + experimental.chat.system.transform",
+      "systemTokens": 0,
+      "roundTrips": 1,
+      "perTask": [
+        {
+          "tokens": 306,
+          "ms": 5.953624,
+          "targetFound": true,
+          "payload": "Relevant Memory:\n- blocker/bench-p500: Auth bug (bench-p500): verifyToken in src/modules/auth/service.ts accepts expired tokens when clock skew exceeds 30s; the fix clamps the skew window and re-checks exp before signature verification.\n- context/bench-p500: Last session on bench-p500: worked through the flashcard deck import path, replaced the deprecated form parser, and left the auth clock-skew bug open with a failing regression test.\n- decision/bench-p500: Flashcards API (bench-p500): the endpoint handler lives in src/modules/flashcards/routes.ts; POST /api/flashcards validates the deck payload then delegates to the service layer.\n- pattern/bench-p500: bench-p500 module \"auth5\": 4 files at src/modules/auth5/; entry src/modules/auth5/service.ts; exports loadAuth5, saveAuth5, invalidateAuth5.\n- pattern/bench-p500: bench-p500 module \"auth6\": 4 files at src/modules/auth6/; entry src/modules/auth6/service.ts; exports loadAuth6, saveAuth6, invalidateAuth6.\n\nUse these memories only when they are relevant. Do not mention this block unless asked.",
+          "extra": {
+            "blocks": 1,
+            "chars": 1056
+          }
+        },
+        {
+          "tokens": 282,
+          "ms": 2.870882,
+          "targetFound": true,
+          "payload": "Relevant Memory:\n- decision/bench-p500: Flashcards API (bench-p500): the endpoint handler lives in src/modules/flashcards/routes.ts; POST /api/flashcards validates the deck payload then delegates to the service layer.\n- blocker/bench-p500: Auth bug (bench-p500): verifyToken in src/modules/auth/service.ts accepts expired tokens when clock skew exceeds 30s; the fix clamps the skew window and re-checks exp before signature verification.\n- context/bench-p500: Last session on bench-p500: worked through the flashcard deck import path, replaced the deprecated form parser, and left the auth clock-skew bug open with a failing regression test.\n- learning/bench-p500: Repos in bench-p500 run tests with \"bun test\"; the old \"npm test\" script is broken, all tasks that touch the test runner must use bun.\n- pattern/bench-p500: bench-p500 module \"tokens.ts\": 0 files at src/modules/tokens.ts/; entry ; exports n/a.\n\nUse these memories only when they are relevant. Do not mention this block unless asked.",
+          "extra": {
+            "blocks": 1,
+            "chars": 997
+          }
+        }
+      ],
+      "notes": "Keyword-only: grep-style substring scoring over its own memory log. No embeddings, no model, nothing leaves the box. It also ships with autoLoad=false — on defaults it injects NOTHING per turn (0 tokens); the figure here is the configured path.",
+      "extra": {
+        "store": "130 memories written via the real memory_remember tool in 14788 ms",
+        "defaults": {
+          "autoLoad": false,
+          "contextLimit": 5,
+          "contextMaxChars": 1200,
+          "contextMinScore": 1
+        }
+      },
+      "tasks": [
+        {
+          "id": "fix_auth",
+          "injectedTokens": 306,
+          "retrievalTokens": 306,
+          "systemTokens": 0,
+          "overheadMs": 5.95,
+          "targetFound": true,
+          "snr": 0.912,
+          "blocks": 1,
+          "chars": 1056
+        },
+        {
+          "id": "add_endpoint",
+          "injectedTokens": 282,
+          "retrievalTokens": 282,
+          "systemTokens": 0,
+          "overheadMs": 2.87,
+          "targetFound": true,
+          "snr": 0.621,
+          "blocks": 1,
+          "chars": 997
+        }
+      ],
+      "meanInjectedTokens": 294,
+      "meanOverheadMs": 4.41,
+      "targetRate": 1,
+      "meanSnr": 0.766
+    },
+    {
+      "id": "opencode_mem",
+      "label": "Opencode Mem (Turso/libSQL)",
+      "method": "executed",
+      "exec": "real libSQL schema + real vector_distance_cos query + Xenova/nomic-embed-text-v1 (768d)",
+      "systemTokens": 0,
+      "roundTrips": 1,
+      "perTask": [
+        {
+          "tokens": 60,
+          "ms": 37.374338,
+          "targetFound": true,
+          "payload": "fact-auth-verify: Auth bug (bench-p500): verifyToken in src/modules/auth/service.ts accepts expired tokens when clock skew exceeds 30s; the fix clamps the skew window and re-checks exp before signature verification.",
+          "extra": {
+            "hits": 10,
+            "kept": 1
+          }
+        },
+        {
+          "tokens": 400,
+          "ms": 35.577326,
+          "targetFound": true,
+          "payload": "fact-flashcard-endpoint: Flashcards API (bench-p500): the endpoint handler lives in src/modules/flashcards/routes.ts; POST /api/flashcards validates the deck payload then delegates to the service layer.\nmod-flashcards: bench-p500 module \"flashcards\": 4 files at src/modules/flashcards/; entry src/modules/flashcards/service.ts; exports loadFlashcards, saveFlashcards, invalidateFlashcards.\nmod-flashcards2: bench-p500 module \"flashcards2\": 4 files at src/modules/flashcards2/; entry src/modules/flashcards2/service.ts; exports loadFlashcards2, saveFlashcards2, invalidateFlashcards2.\nmod-flashcards4: bench-p500 module \"flashcards4\": 4 files at src/modules/flashcards4/; entry src/modules/flashcards4/service.ts; exports loadFlashcards4, saveFlashcards4, invalidateFlashcards4.\nmod-flashcards5: bench-p500 module \"flashcards5\": 4 files at src/modules/flashcards5/; entry src/modules/flashcards5/service.ts; exports loadFlashcards5, saveFlashcards5, invalidateFlashcards5.\nmod-flashcards3: bench-p500 module \"flashcards3\": 4 files at src/modules/flashcards3/; entry src/modules/flashcards3/service.ts; exports loadFlashcards3, saveFlashcards3, invalidateFlashcards3.\nmod-flashcards6: bench-p500 module \"flashcards6\": 4 files at src/modules/flashcards6/; entry src/modules/flashcards6/service.ts; exports loadFlashcards6, saveFlashcards6, invalidateFlashcards6.",
+          "extra": {
+            "hits": 10,
+            "kept": 7
+          }
+        }
+      ],
+      "notes": "Local libSQL vector shard; per-turn cost is only what the similarity threshold lets through.",
+      "extra": {
+        "store": "130 memories, embeddings in 12240.2 ms (model load 2279.5 ms)",
+        "model": "Xenova/nomic-embed-text-v1",
+        "thresholds": {
+          "similarity": 0.6,
+          "maxMemories": 10
+        }
+      },
+      "tasks": [
+        {
+          "id": "fix_auth",
+          "injectedTokens": 60,
+          "retrievalTokens": 60,
+          "systemTokens": 0,
+          "overheadMs": 37.37,
+          "targetFound": true,
+          "snr": 1,
+          "hits": 10,
+          "kept": 1
+        },
+        {
+          "id": "add_endpoint",
+          "injectedTokens": 400,
+          "retrievalTokens": 400,
+          "systemTokens": 0,
+          "overheadMs": 35.58,
+          "targetFound": true,
+          "snr": 1,
+          "hits": 10,
+          "kept": 7
+        }
+      ],
+      "meanInjectedTokens": 230,
+      "meanOverheadMs": 36.48,
+      "targetRate": 1,
+      "meanSnr": 1
+    },
+    {
+      "id": "csuwl",
+      "label": "@csuwl Memory Plugin",
+      "method": "executed",
+      "exec": "real VectorStore (lib/vector-store.js) under Node",
+      "systemTokens": 2534,
+      "roundTrips": 2,
+      "perTask": [
+        {
+          "tokens": 479,
+          "ms": 47.592787,
+          "targetFound": true,
+          "payload": "fact-auth-verify: Auth bug (bench-p500): verifyToken in src/modules/auth/service.ts accepts expired tokens when clock skew exceeds 30s; the fix clamps the skew window and re-checks exp before signature verification.\nfact-session-summary: Last session on bench-p500: worked through the flashcard deck import path, replaced the deprecated form parser, and left the auth clock-skew bug open with a failing regression test.\nmod-auth: bench-p500 module \"auth\": 8 files at src/modules/auth/; entry src/modules/auth/service.ts; exports loadAuth, saveAuth, invalidateAuth.\nmod-auth: bench-p500 module \"auth\": 8 files at src/modules/auth/; entry src/modules/auth/service.ts; exports loadAuth, saveAuth, invalidateAuth.\nmod-auth2: bench-p500 module \"auth2\": 4 files at src/modules/auth2/; entry src/modules/auth2/service.ts; exports loadAuth2, saveAuth2, invalidateAuth2.\nmod-auth3: bench-p500 module \"auth3\": 4 files at src/modules/auth3/; entry src/modules/auth3/service.ts; exports loadAuth3, saveAuth3, invalidateAuth3.\nmod-auth4: bench-p500 module \"auth4\": 4 files at src/modules/auth4/; entry src/modules/auth4/service.ts; exports loadAuth4, saveAuth4, invalidateAuth4.\nmod-auth5: bench-p500 module \"auth5\": 4 files at src/modules/auth5/; entry src/modules/auth5/service.ts; exports loadAuth5, saveAuth5, invalidateAuth5.\nmod-auth6: bench-p500 module \"auth6\": 4 files at src/modules/auth6/; entry src/modules/auth6/service.ts; exports loadAuth6, saveAuth6, invalidateAuth6.\nmod-tokens.ts: bench-p500 module \"tokens.ts\": 0 files at src/modules/tokens.ts/; entry ; exports n/a.",
+          "extra": {
+            "hybridHits": 10,
+            "vectorOnlyHits": 4,
+            "vectorOnlyTokens": 240,
+            "vectorOnlyMs": 33.09
+          }
+        },
+        {
+          "tokens": 564,
+          "ms": 26.237161,
+          "targetFound": true,
+          "payload": "fact-flashcard-endpoint: Flashcards API (bench-p500): the endpoint handler lives in src/modules/flashcards/routes.ts; POST /api/flashcards validates the deck payload then delegates to the service layer.\nfact-flashcard-endpoint: Flashcards API (bench-p500): the endpoint handler lives in src/modules/flashcards/routes.ts; POST /api/flashcards validates the deck payload then delegates to the service layer.\nmod-flashcards: bench-p500 module \"flashcards\": 4 files at src/modules/flashcards/; entry src/modules/flashcards/service.ts; exports loadFlashcards, saveFlashcards, invalidateFlashcards.\nmod-flashcards: bench-p500 module \"flashcards\": 4 files at src/modules/flashcards/; entry src/modules/flashcards/service.ts; exports loadFlashcards, saveFlashcards, invalidateFlashcards.\nmod-flashcards: bench-p500 module \"flashcards\": 4 files at src/modules/flashcards/; entry src/modules/flashcards/service.ts; exports loadFlashcards, saveFlashcards, invalidateFlashcards.\nfact-session-summary: Last session on bench-p500: worked through the flashcard deck import path, replaced the deprecated form parser, and left the auth clock-skew bug open with a failing regression test.\nfact-session-summary: Last session on bench-p500: worked through the flashcard deck import path, replaced the deprecated form parser, and left the auth clock-skew bug open with a failing regression test.\nmod-flashcards2: bench-p500 module \"flashcards2\": 4 files at src/modules/flashcards2/; entry src/modules/flashcards2/service.ts; exports loadFlashcards2, saveFlashcards2, invalidateFlashcards2.\nmod-flashcards3: bench-p500 module \"flashcards3\": 4 files at src/modules/flashcards3/; entry src/modules/flashcards3/service.ts; exports loadFlashcards3, saveFlashcards3, invalidateFlashcards3.\nmod-flashcards4: bench-p500 module \"flashcards4\": 4 files at src/modules/flashcards4/; entry src/modules/flashcards4/service.ts; exports loadFlashcards4, saveFlashcards4, invalidateFlashcards4.",
+          "extra": {
+            "hybridHits": 10,
+            "vectorOnlyHits": 4,
+            "vectorOnlyTokens": 232,
+            "vectorOnlyMs": 23.73
+          }
+        }
+      ],
+      "notes": "Real VectorStore (better-sqlite3 + sqlite-vec, Xenova/all-MiniLM-L6-v2, 384d) in its own default hybrid mode (limit 10, 0.7 vector / 0.3 keyword), plus 6 core .md files re-injected every session — those alone are 2,534 tokens, 97.7% of its per-turn cost.",
+      "extra": {
+        "store": "130 chunks indexed, 520 rows",
+        "initMs": 451,
+        "systemChars": 8908,
+        "searchMode": "hybrid (their default)"
+      },
+      "tasks": [
+        {
+          "id": "fix_auth",
+          "injectedTokens": 3013,
+          "retrievalTokens": 479,
+          "systemTokens": 2534,
+          "overheadMs": 47.59,
+          "targetFound": true,
+          "snr": 0.929,
+          "hybridHits": 10,
+          "vectorOnlyHits": 4,
+          "vectorOnlyTokens": 240,
+          "vectorOnlyMs": 33.09
+        },
+        {
+          "id": "add_endpoint",
+          "injectedTokens": 3098,
+          "retrievalTokens": 564,
+          "systemTokens": 2534,
+          "overheadMs": 26.24,
+          "targetFound": true,
+          "snr": 1,
+          "hybridHits": 10,
+          "vectorOnlyHits": 4,
+          "vectorOnlyTokens": 232,
+          "vectorOnlyMs": 23.73
+        }
+      ],
+      "meanInjectedTokens": 3056,
+      "meanOverheadMs": 36.91,
+      "targetRate": 1,
+      "meanSnr": 0.965
+    },
+    {
+      "id": "mcp_kg",
+      "label": "MCP Knowledge Graph",
+      "method": "executed",
+      "exec": "real published MCP server over stdio (JSON-RPC)",
+      "systemTokens": 0,
+      "roundTrips": 2,
+      "perTask": [
+        {
+          "tokens": 10,
+          "ms": 7.321647,
+          "targetFound": false,
+          "payload": "{\n  \"entities\": [],\n  \"relations\": []\n}",
+          "extra": {
+            "entities": 8,
+            "keywordTokens": 576,
+            "keywordHits": 8,
+            "openMs": 6.55,
+            "openTokens": 576
+          }
+        },
+        {
+          "tokens": 10,
+          "ms": 4.349935,
+          "targetFound": false,
+          "payload": "{\n  \"entities\": [],\n  \"relations\": []\n}",
+          "extra": {
+            "entities": 7,
+            "keywordTokens": 555,
+            "keywordHits": 7,
+            "openMs": 4.72,
+            "openTokens": 555
+          }
+        }
+      ],
+      "notes": "Entity/observation graph over JSONL. 9 tools; a miss in search means a second hop (open_nodes) or a full read_graph. Its search_nodes matches the whole query as ONE substring — a natural task sentence returns nothing, so it only works if the caller hand-shapes a single keyword.",
+      "extra": {
+        "tools": [
+          "create_entities",
+          "create_relations",
+          "add_observations",
+          "delete_entities",
+          "delete_observations",
+          "delete_relations",
+          "read_graph",
+          "search_nodes",
+          "open_nodes"
+        ],
+        "handshakeMs": 873.7,
+        "ingestMs": 110.8
+      },
+      "tasks": [
+        {
+          "id": "fix_auth",
+          "injectedTokens": 10,
+          "retrievalTokens": 10,
+          "systemTokens": 0,
+          "overheadMs": 7.32,
+          "targetFound": false,
+          "snr": 0,
+          "entities": 8,
+          "keywordTokens": 576,
+          "keywordHits": 8,
+          "openMs": 6.55,
+          "openTokens": 576
+        },
+        {
+          "id": "add_endpoint",
+          "injectedTokens": 10,
+          "retrievalTokens": 10,
+          "systemTokens": 0,
+          "overheadMs": 4.35,
+          "targetFound": false,
+          "snr": 0,
+          "entities": 7,
+          "keywordTokens": 555,
+          "keywordHits": 7,
+          "openMs": 4.72,
+          "openTokens": 555
+        }
+      ],
+      "meanInjectedTokens": 10,
+      "meanOverheadMs": 5.84,
+      "targetRate": 0,
+      "meanSnr": 0
+    },
+    {
+      "id": "mem0",
+      "label": "Mem0 (hosted / OSS)",
+      "method": "hosted",
+      "exec": "artifacts measured from the published mem0ai OSS bundle (not executed: needs an LLM + vector store)",
+      "systemTokens": 0,
+      "roundTrips": 2,
+      "notes": "Its real extraction prompt is 34,108 chars ≈ 9,221 tokens — billed on every ingestion turn, on top of the recall call. Not executed here: it needs an LLM endpoint.",
+      "tasks": [
+        {
+          "id": "fix_auth",
+          "injectedTokens": 9221,
+          "retrievalTokens": 9221,
+          "systemTokens": 0,
+          "overheadMs": null,
+          "targetFound": null,
+          "snr": null
+        },
+        {
+          "id": "add_endpoint",
+          "injectedTokens": 9221,
+          "retrievalTokens": 9221,
+          "systemTokens": 0,
+          "overheadMs": null,
+          "targetFound": null,
+          "snr": null
+        }
+      ],
+      "meanInjectedTokens": 9221,
+      "meanOverheadMs": null,
+      "targetRate": null,
+      "meanSnr": null,
+      "extra": {
+        "kind": "hosted",
+        "exec": "artifacts measured from the published mem0ai OSS bundle (not executed: needs an LLM + vector store)",
+        "extractionPrompt": {
+          "chars": 34108,
+          "tokens": 9221
+        },
+        "systemPrompt": {
+          "chars": 570,
+          "tokens": 156
+        },
+        "flow": "per turn: 1 LLM extraction call (prompt above) → 1 embed → 1 vector add/search → facts merged into the system prompt",
+        "injectedTokensPerTurn": 9221,
+        "roundTripsPerTurn": 2
+      }
+    },
+    {
+      "id": "supermemory",
+      "label": "Supermemory (hosted)",
+      "method": "hosted",
+      "exec": "artifacts from the published client (v5.0.2); the memory itself runs on their servers — not executed",
+      "systemTokens": 0,
+      "roundTrips": 2,
+      "notes": "Everything lives behind api.supermemory.ai: no local index, no local model, no offline path. Reported as hosted.",
+      "tasks": [
+        {
+          "id": "fix_auth",
+          "injectedTokens": null,
+          "retrievalTokens": null,
+          "systemTokens": 0,
+          "overheadMs": null,
+          "targetFound": null,
+          "snr": null
+        },
+        {
+          "id": "add_endpoint",
+          "injectedTokens": null,
+          "retrievalTokens": null,
+          "systemTokens": 0,
+          "overheadMs": null,
+          "targetFound": null,
+          "snr": null
+        }
+      ],
+      "meanInjectedTokens": null,
+      "meanOverheadMs": null,
+      "targetRate": null,
+      "meanSnr": null,
+      "extra": {
+        "kind": "hosted",
+        "exec": "artifacts from the published client (v5.0.2); the memory itself runs on their servers — not executed",
+        "agentTools": 0,
+        "clientBytes": 702257,
+        "flow": "per turn: HTTP POST /v3/documents (ingest) and /v3/search (recall) against api.supermemory.ai; no local store, no local model",
+        "roundTripsPerTurn": 2
+      }
+    }
+  ],
+  "errors": {
+    "simple": null,
+    "omem": null,
+    "node": null
+  }
+}

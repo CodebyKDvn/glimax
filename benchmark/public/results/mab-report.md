@@ -1,0 +1,43 @@
+# mab × Chronos-Palace v4
+
+_2026-10-27T13:42:21.483Z_
+
+```
+mab — Chronos-Palace v4.1 · retrieval level · 36 samples · 3500 questions (3500 scoreable: 0 structural + 3500 presence-only; 0 without gold)
+ingested: 47738 turns → 93040 edges / 93040 L3 rows (1577336.86ms total)
+
+note: r1..r50 here = fraction of required gold EVIDENCE items (turns/sessions) found in top-k of retrieved turns.
+
+| channel | R@1 | R@5 | R@10 | R@50 | MRR | p50 ms | p95 ms |
+|---------|----:|----:|-----:|-----:|----:|-------:|-------:|
+| graph   | — | — | — | — | — | 12.4 | 83.26 |
+| verbatim | — | — | — | — | — | 3.95 | 33.1 |
+| union   | — | — | — | — | — | 16.76 | 116.76 |
+| product | — | — | — | — | — | 47.91 | 315.06 |
+
+answer-string presence (weak proxy: fraction of gold answer strings visible in the retrieved context):
+| channel | P@1 | P@10 |
+|---------|----:|-----:|
+| graph   | 34.27% | 65.47% |
+| verbatim | 45.32% | 77.17% |
+| union   | 42.52% | 74.77% |
+| product | 45.32% | 77.17% |
+presence proxy: 1768/3500 questions excluded (no gold answer string occurs anywhere in the corpus)
+
+pareto check (v4.1, presence): union P@10 74.77% / product P@10 77.17% ≥ max(graph 65.47%, verbatim 77.17%) → union FAIL, product PASS
+
+per type (R@10 / MRR):
+| type | n | graph | verbatim | union | product |
+|------|--:|------:|---------:|------:|--------:|
+| AR/knowledge-update | 45 | P@10 13.16% | P@10 63.16% | P@10 63.16% | P@10 63.16% |
+| AR/multi-session | 75 | P@10 34.88% | P@10 55.81% | P@10 55.81% | P@10 55.81% |
+| AR/qa | 1700 | P@10 62.07% | P@10 85.47% | P@10 81.77% | P@10 85.47% |
+| AR/single-session-assistant | 30 | P@10 11.76% | P@10 94.12% | P@10 94.12% | P@10 94.12% |
+| AR/single-session-preference | 30 | — | — | — | — |
+| AR/single-session-user | 45 | P@10 5.13% | P@10 64.1% | P@10 64.1% | P@10 64.1% |
+| AR/temporal-reasoning | 75 | P@10 25% | P@10 58.33% | P@10 58.33% | P@10 58.33% |
+| CR/qa | 800 | P@10 62% | P@10 70.38% | P@10 66.5% | P@10 70.38% |
+| TTL/qa | 700 | P@10 84.86% | P@10 87.5% | P@10 86.97% | P@10 87.5% |
+
+product packet: mean 275.1 tok · p95 287 tok · "nothing remembered": 0/3500
+```

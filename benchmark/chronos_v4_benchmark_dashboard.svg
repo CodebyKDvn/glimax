@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1200" viewBox="0 0 1920 1200">
+<rect x="0" y="0" width="1920" height="1200" fill="#f7f4ee"/>
+<text x="84" y="104" font-family="'IBM Plex Serif', 'Noto Serif', 'DejaVu Serif', Georgia, serif" font-size="58" font-weight="600" fill="#16181c" letter-spacing="-1">Memory Arena: Coding Agents</text>
+<text x="90" y="138" font-family="'IBM Plex Serif', 'Noto Serif', 'DejaVu Serif', Georgia, serif" font-size="21" font-weight="400" fill="#8a8377" font-style="italic">how much a coding agent drags into every turn</text>
+<rect x="76" y="156" width="1180" height="54" rx="3" fill="#f6ce3c"/>
+<text x="98" y="193" font-family="'IBM Plex Serif', 'Noto Serif', 'DejaVu Serif', Georgia, serif" font-size="26" font-weight="700" fill="#1b1d21" font-style="italic">Chronos-Palace v4.0 against the real memory packages — executed on this box</text>
+<rect x="1596" y="78" width="30" height="30" fill="#1b2f8c"/>
+<rect x="1605" y="87" width="12" height="12" fill="#f7f4ee"/>
+<text x="1836" y="99" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="400" fill="#16181c" text-anchor="end" letter-spacing="2.4">CHRONOS.ARENA</text>
+<text x="1836" y="122" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end" letter-spacing="0.8">p500 · 500 files · 195,697 raw tokens</text>
+<text x="1836" y="141" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end" letter-spacing="0.8">130 memories served to every system</text>
+<line x1="84" y1="228" x2="1836" y2="228" stroke="#ddd7cc" stroke-width="1.5"/>
+<text x="100" y="262" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" letter-spacing="1.8">RANK</text>
+<text x="176" y="262" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" letter-spacing="1.8">SYSTEM</text>
+<text x="604" y="262" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" letter-spacing="1.8">CONTEXT PER TASK — TOKENS (LOG) · SOLID = RETRIEVED · LIGHT = FILE READ NEXT</text>
+<text x="1570" y="262" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" letter-spacing="1.8">TARGET SURFACED</text>
+<line x1="781.3240296261067" y1="274" x2="781.3240296261067" y2="900" stroke="#e7e1d6" stroke-width="1"/>
+<line x1="958.6480592522134" y1="274" x2="958.6480592522134" y2="900" stroke="#e7e1d6" stroke-width="1"/>
+<line x1="1135.97208887832" y1="274" x2="1135.97208887832" y2="900" stroke="#e7e1d6" stroke-width="1"/>
+<line x1="1313.2961185044269" y1="274" x2="1313.2961185044269" y2="900" stroke="#e7e1d6" stroke-width="1"/>
+<line x1="1490.6201481305334" y1="274" x2="1490.6201481305334" y2="900" stroke="#e7e1d6" stroke-width="1"/>
+<circle cx="116" cy="324" r="23" fill="none" stroke="#1b2f8c" stroke-width="1.8"/>
+<text x="116" y="331" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#1b2f8c" text-anchor="middle">1</text>
+<text x="176" y="322" font-family="'IBM Plex Sans', Inter, 'DejaVu Sans', system-ui, sans-serif" font-size="25" font-weight="500" fill="#16181c">Opencode Mem (Turso/libSQL)</text>
+<text x="178" y="344" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#8a8377" letter-spacing="0.4">libSQL vector recall · a pointer, not the code</text>
+<rect x="604" y="310" width="418.7910967627845" height="27" rx="2" fill="#7b86bf"/>
+<rect x="1021.7910967627845" y="310" width="91.09663217048228" height="27" rx="2" fill="#ccd3ea"/>
+<line x1="1112.8877289332668" y1="299" x2="1112.8877289332668" y2="349" stroke="#7b86bf" stroke-width="2.6"/>
+<text x="1127.8877289332668" y="331" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#4a453f">741</text>
+<circle cx="1579" cy="323" r="8" fill="#1b2f8c"/>
+<text x="1596" y="330" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="18" font-weight="500" fill="#4a453f">100%</text>
+<text x="1836" y="330" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end" letter-spacing="1.4">EXECUTED</text>
+<circle cx="116" cy="408" r="23" fill="none" stroke="#1b2f8c" stroke-width="1.8"/>
+<text x="116" y="415" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#1b2f8c" text-anchor="middle">2</text>
+<text x="176" y="406" font-family="'IBM Plex Sans', Inter, 'DejaVu Sans', system-ui, sans-serif" font-size="25" font-weight="500" fill="#16181c">Simple Memory (Knikolov)</text>
+<text x="178" y="428" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#8a8377" letter-spacing="0.4">keyword pack · a pointer, not the code</text>
+<rect x="604" y="394" width="437.6972951455268" height="27" rx="2" fill="#7b86bf"/>
+<rect x="1040.6972951455268" y="394" width="78.57013963224381" height="27" rx="2" fill="#ccd3ea"/>
+<line x1="1119.2674347777706" y1="383" x2="1119.2674347777706" y2="433" stroke="#7b86bf" stroke-width="2.6"/>
+<text x="1134.2674347777706" y="415" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#4a453f">805</text>
+<circle cx="1579" cy="407" r="8" fill="#1b2f8c"/>
+<text x="1596" y="414" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="18" font-weight="500" fill="#4a453f">100%</text>
+<text x="1836" y="414" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end" letter-spacing="1.4">EXECUTED</text>
+<rect x="72" y="460" width="1776" height="68" rx="14" fill="none" stroke="#f6ce3c" stroke-width="3"/>
+<circle cx="116" cy="492" r="23" fill="none" stroke="#1b2f8c" stroke-width="1.8"/>
+<text x="116" y="499" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#1b2f8c" text-anchor="middle">3</text>
+<text x="176" y="490" font-family="'IBM Plex Sans', Inter, 'DejaVu Sans', system-ui, sans-serif" font-size="25" font-weight="500" fill="#16181c">Chronos-Palace v4.0</text>
+<text x="178" y="512" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#8a8377" letter-spacing="0.4">in-process · genome + packet, carries a code slice</text>
+<rect x="604" y="478" width="503.5076893952619" height="27" rx="2" fill="#1b2f8c"/>
+<rect x="1106.5076893952619" y="478" width="25.27068245917667" height="27" rx="2" fill="#aab3dd"/>
+<line x1="1131.7783718544385" y1="467" x2="1131.7783718544385" y2="517" stroke="#1b2f8c" stroke-width="2.6"/>
+<text x="1146.7783718544385" y="499" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#4a453f">947</text>
+<circle cx="1579" cy="491" r="8" fill="#1b2f8c"/>
+<text x="1596" y="498" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="18" font-weight="500" fill="#4a453f">100%</text>
+<text x="1836" y="498" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end" letter-spacing="1.4">MEASURED</text>
+<circle cx="116" cy="576" r="23" fill="none" stroke="#1b2f8c" stroke-width="1.8"/>
+<text x="116" y="583" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#1b2f8c" text-anchor="middle">4</text>
+<text x="176" y="574" font-family="'IBM Plex Sans', Inter, 'DejaVu Sans', system-ui, sans-serif" font-size="25" font-weight="500" fill="#16181c">@csuwl Memory Plugin</text>
+<text x="178" y="596" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#8a8377" letter-spacing="0.4">hybrid recall + 2.5k tok of .md re-injected every session</text>
+<rect x="604" y="562" width="618.0014358698402" height="27" rx="2" fill="#7b86bf"/>
+<rect x="1221.0014358698402" y="562" width="12.907265931384927" height="27" rx="2" fill="#ccd3ea"/>
+<line x1="1233.908701801225" y1="551" x2="1233.908701801225" y2="601" stroke="#7b86bf" stroke-width="2.6"/>
+<text x="1248.908701801225" y="583" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#4a453f">3.6k</text>
+<circle cx="1579" cy="575" r="8" fill="#1b2f8c"/>
+<text x="1596" y="582" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="18" font-weight="500" fill="#4a453f">100%</text>
+<text x="1836" y="582" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end" letter-spacing="1.4">EXECUTED</text>
+<circle cx="116" cy="660" r="23" fill="none" stroke="#1b2f8c" stroke-width="1.8"/>
+<text x="116" y="667" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#1b2f8c" text-anchor="middle">5</text>
+<text x="176" y="658" font-family="'IBM Plex Sans', Inter, 'DejaVu Sans', system-ui, sans-serif" font-size="25" font-weight="500" fill="#16181c">MCP Knowledge Graph (official)</text>
+<text x="178" y="680" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#8a8377" letter-spacing="0.4">JSONL entity graph · needs a hand-shaped keyword</text>
+<rect x="604" y="646" width="177.32402962610672" height="27" rx="2" fill="#c9c2b6"/>
+<line x1="781.3240296261067" y1="635" x2="781.3240296261067" y2="685" stroke="#c9c2b6" stroke-width="2.6"/>
+<text x="796.3240296261067" y="667" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#4a453f">10</text>
+<circle cx="1579" cy="659" r="8" fill="none" stroke="#c9c2b6" stroke-width="2"/>
+<text x="1596" y="666" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="15" font-weight="400" fill="#8a8377">0% (miss)</text>
+<text x="1836" y="666" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end" letter-spacing="1.4">EXECUTED</text>
+<circle cx="116" cy="744" r="23" fill="none" stroke="#1b2f8c" stroke-width="1.8"/>
+<text x="116" y="751" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#1b2f8c" text-anchor="middle">6</text>
+<text x="176" y="742" font-family="'IBM Plex Sans', Inter, 'DejaVu Sans', system-ui, sans-serif" font-size="25" font-weight="500" fill="#16181c">Mem0 (hosted / OSS)</text>
+<text x="178" y="764" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#8a8377" letter-spacing="0.4">hosted · its real extraction prompt, billed per ingestion</text>
+<rect x="604" y="730" width="703.0504154380324" height="27" rx="2" fill="#e9e3d7" stroke="#c9c2b6" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="1307.0504154380324" y1="719" x2="1307.0504154380324" y2="769" stroke="#7b86bf" stroke-width="2.6"/>
+<text x="1322.0504154380324" y="751" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#4a453f">9.2k</text>
+<text x="1570" y="750" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="18" font-weight="400" fill="#c9c2b6">—</text>
+<text x="1836" y="750" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end" letter-spacing="1.4">HOSTED</text>
+<circle cx="116" cy="828" r="23" fill="none" stroke="#1b2f8c" stroke-width="1.8"/>
+<text x="116" y="835" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="19" font-weight="500" fill="#1b2f8c" text-anchor="middle">7</text>
+<text x="176" y="826" font-family="'IBM Plex Sans', Inter, 'DejaVu Sans', system-ui, sans-serif" font-size="25" font-weight="500" fill="#16181c">Supermemory (hosted)</text>
+<text x="178" y="848" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#8a8377" letter-spacing="0.4">hosted · nothing to measure locally</text>
+<rect x="604" y="814" width="260" height="27" rx="2" fill="#eee9de" stroke="#c9c2b6" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="878" y="835" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="15" font-weight="400" fill="#8a8377" font-style="italic">no local measurement</text>
+<text x="1570" y="834" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="18" font-weight="400" fill="#c9c2b6">—</text>
+<text x="1836" y="834" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end" letter-spacing="1.4">HOSTED</text>
+<line x1="604" y1="900" x2="1574" y2="900" stroke="#ddd7cc" stroke-width="1.5"/>
+<line x1="781.3240296261067" y1="900" x2="781.3240296261067" y2="907" stroke="#ddd7cc" stroke-width="1.2"/>
+<text x="781.3240296261067" y="926" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="middle">10</text>
+<line x1="958.6480592522134" y1="900" x2="958.6480592522134" y2="907" stroke="#ddd7cc" stroke-width="1.2"/>
+<text x="958.6480592522134" y="926" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="middle">100</text>
+<line x1="1135.97208887832" y1="900" x2="1135.97208887832" y2="907" stroke="#ddd7cc" stroke-width="1.2"/>
+<text x="1135.97208887832" y="926" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="middle">1.0k</text>
+<line x1="1313.2961185044269" y1="900" x2="1313.2961185044269" y2="907" stroke="#ddd7cc" stroke-width="1.2"/>
+<text x="1313.2961185044269" y="926" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="middle">10k</text>
+<line x1="1490.6201481305334" y1="900" x2="1490.6201481305334" y2="907" stroke="#ddd7cc" stroke-width="1.2"/>
+<text x="1490.6201481305334" y="926" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="middle">100k</text>
+<text x="1574" y="926" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">tokens</text>
+<line x1="84" y1="962" x2="649.3333333333334" y2="962" stroke="#ddd7cc" stroke-width="1.2"/><text x="84" y="988" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" letter-spacing="1.8">01 · SCALING</text><text x="84" y="1014" font-family="'IBM Plex Serif', 'Noto Serif', 'DejaVu Serif', Georgia, serif" font-size="19" font-weight="600" fill="#16181c">Tokens per task vs project size</text>
+<polyline points="124,1114.1493958666845 275.77777777777777,1114.0742376796297 427.55555555555554,1114.032695263697 579.3333333333334,1114.0992356484828" fill="none" stroke="#1b2f8c" stroke-width="2.6"/>
+<circle cx="124" cy="1114.1493958666845" r="3.6" fill="#f7f4ee" stroke="#1b2f8c" stroke-width="2.2"/>
+<circle cx="275.77777777777777" cy="1114.0742376796297" r="3.6" fill="#f7f4ee" stroke="#1b2f8c" stroke-width="2.2"/>
+<circle cx="427.55555555555554" cy="1114.032695263697" r="3.6" fill="#f7f4ee" stroke="#1b2f8c" stroke-width="2.2"/>
+<circle cx="579.3333333333334" cy="1114.0992356484828" r="3.6" fill="#f7f4ee" stroke="#1b2f8c" stroke-width="2.2"/>
+<text x="587.3333333333334" y="1118.0992356484828" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#1b2f8c">687</text>
+<polyline points="124,1076.6305262153644 275.77777777777777,1063.4564136864099 427.55555555555554,1049.3573637516345 579.3333333333334,1041.383060379129" fill="none" stroke="#c9c2b6" stroke-width="2.6"/>
+<circle cx="124" cy="1076.6305262153644" r="3.6" fill="#f7f4ee" stroke="#c9c2b6" stroke-width="2.2"/>
+<circle cx="275.77777777777777" cy="1063.4564136864099" r="3.6" fill="#f7f4ee" stroke="#c9c2b6" stroke-width="2.2"/>
+<circle cx="427.55555555555554" cy="1049.3573637516345" r="3.6" fill="#f7f4ee" stroke="#c9c2b6" stroke-width="2.2"/>
+<circle cx="579.3333333333334" cy="1041.383060379129" r="3.6" fill="#f7f4ee" stroke="#c9c2b6" stroke-width="2.2"/>
+<text x="587.3333333333334" y="1045.383060379129" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377">393k</text>
+<text x="124" y="1140" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" text-anchor="middle">50</text>
+<text x="275.77777777777777" y="1140" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" text-anchor="middle">150</text>
+<text x="427.55555555555554" y="1140" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" text-anchor="middle">500</text>
+<text x="579.3333333333334" y="1140" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" text-anchor="middle">1000</text>
+<text x="649.3333333333334" y="1140" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" text-anchor="end">files</text>
+<line x1="677.3333333333334" y1="962" x2="1242.6666666666667" y2="962" stroke="#ddd7cc" stroke-width="1.2"/><text x="677.3333333333334" y="988" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" letter-spacing="1.8">02 · OVERHEAD</text><text x="677.3333333333334" y="1014" font-family="'IBM Plex Serif', 'Noto Serif', 'DejaVu Serif', Georgia, serif" font-size="19" font-weight="600" fill="#16181c">Retrieval latency per task (ms)</text>
+<line x1="950.2296098965378" y1="1028" x2="950.2296098965378" y2="1130" stroke="#e7e1d6" stroke-width="1"/>
+<text x="785.3333333333334" y="1040" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">Simple Memory</text>
+<rect x="795.3333333333334" y="1030" width="47.00383655303335" height="13" rx="1.5" fill="#7b86bf"/>
+<text x="850.3371698863667" y="1040" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">4.4</text>
+<text x="785.3333333333334" y="1059.2" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="600" fill="#1b2f8c" text-anchor="end">Chronos synth</text>
+<rect x="795.3333333333334" y="1049.2" width="75.51090339397547" height="13" rx="1.5" fill="#1b2f8c"/>
+<text x="878.8442367273088" y="1059.2" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">5.5</text>
+<text x="785.3333333333334" y="1078.4" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">MCP KG</text>
+<rect x="795.3333333333334" y="1068.4" width="84.01600909449246" height="13" rx="1.5" fill="#7b86bf"/>
+<text x="887.3493424278258" y="1078.4" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">5.8</text>
+<text x="785.3333333333334" y="1097.6" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">Opencode Mem</text>
+<rect x="795.3333333333334" y="1087.6" width="325.4475939864502" height="13" rx="1.5" fill="#7b86bf"/>
+<text x="1128.7809273197836" y="1097.6" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">36</text>
+<text x="785.3333333333334" y="1116.8" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">@csuwl</text>
+<rect x="795.3333333333334" y="1106.8" width="326.9918782254193" height="13" rx="1.5" fill="#7b86bf"/>
+<text x="1130.3252115587527" y="1116.8" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">37</text>
+<line x1="1270.6666666666667" y1="962" x2="1836" y2="962" stroke="#ddd7cc" stroke-width="1.2"/><text x="1270.6666666666667" y="988" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" letter-spacing="1.8">03 · END TO END</text><text x="1270.6666666666667" y="1014" font-family="'IBM Plex Serif', 'Noto Serif', 'DejaVu Serif', Georgia, serif" font-size="19" font-weight="600" fill="#16181c">Per task, tokens → prefill + overhead</text>
+<text x="1378.6666666666667" y="1040" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">MCP KG</text>
+<rect x="1388.6666666666667" y="1030" width="0.8515390324982827" height="13" rx="1.5" fill="#8a8377"/>
+<text x="1397.518205699165" y="1040" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">11</text>
+<text x="1378.6666666666667" y="1056" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="600" fill="#1b2f8c" text-anchor="end">Chronos</text>
+<rect x="1388.6666666666667" y="1046" width="26.77317663738567" height="13" rx="1.5" fill="#1b2f8c"/>
+<text x="1423.4398433040524" y="1056" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">332</text>
+<text x="1378.6666666666667" y="1072" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">Simple Memory</text>
+<rect x="1388.6666666666667" y="1062" width="31.02696586935617" height="13" rx="1.5" fill="#8a8377"/>
+<text x="1427.693632536023" y="1072" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">385</text>
+<text x="1378.6666666666667" y="1088" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">Opencode Mem</text>
+<rect x="1388.6666666666667" y="1078" width="31.17233130289556" height="13" rx="1.5" fill="#8a8377"/>
+<text x="1427.8389979695623" y="1088" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">387</text>
+<text x="1378.6666666666667" y="1104" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">@csuwl</text>
+<rect x="1388.6666666666667" y="1094" width="138.88163177688605" height="13" rx="1.5" fill="#8a8377"/>
+<text x="1535.5482984435528" y="1104" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">1,724</text>
+<text x="1378.6666666666667" y="1120" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="400" fill="#8a8377" text-anchor="end">Mem0</text>
+<rect x="1388.6666666666667" y="1110" width="351.33333333333326" height="13" rx="1.5" fill="#8a8377"/>
+<text x="1748" y="1120" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#4a453f">4,361</text>
+<text x="1836" y="1140" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" text-anchor="end">at 2115 tok/s measured</text>
+<line x1="84" y1="1148" x2="1836" y2="1148" stroke="#ddd7cc" stroke-width="1.2"/>
+<text x="84" y="1170" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" letter-spacing="1.4">SOURCE: MEASURED ON THIS MACHINE — PACKAGES EXECUTED VIA THEIR OWN CODE, RESULTS/REAL_RIVALS.JSON</text>
+<text x="84" y="1188" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="400" fill="#8a8377" letter-spacing="1.4">NOTE: A MEMORY STORE ONLY POINTS AT CODE — THE FILE IT NAMES IS STILL PREFILLED NEXT TURN, SO BARS CARRY THE READ · HOSTED ROWS ARE ARTIFACT-MEASURED, NEVER EXECUTED · RANK: TARGET SURFACED FIRST, THEN CHEAPEST</text>
+</svg>

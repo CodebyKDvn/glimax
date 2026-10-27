@@ -1,12 +1,15 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
+# dependencies
+node_modules/
 
-# Evolution state (local, per-project)
-.darwin_state.json
+# benchmark scratch: isolated brains (sqlite), per-sample parts, datasets
+benchmark/public/work/
+benchmark/public/data/
+benchmark/work/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.parquet
+*.arrow
 
 # OS / editor
 .DS_Store
