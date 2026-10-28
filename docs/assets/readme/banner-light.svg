@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 352" width="840" height="352" role="img" aria-label="Chronos Palace — temporal memory for OpenCode">
+<rect x="0" y="0" width="840" height="352" fill="#F5F1E6" />
+<text x="44" y="66" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#6E6858" letter-spacing="0.6">OpenCode plugin</text>
+<text x="44" y="140" font-family="Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif" font-size="66" fill="#17233A" font-weight="600" letter-spacing="-1.4">Chronos Palace</text>
+<rect x="44" y="158" width="96" height="5" fill="#E9AE1F" />
+<text x="44" y="200" font-family="Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif" font-size="21" fill="#17233A">Memory that costs nothing to write</text>
+<text x="44" y="228" font-family="Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif" font-size="21" fill="#17233A">and returns exact strings, not summaries.</text>
+<rect x="600" y="58" width="196" height="44" fill="none" stroke="#D3CBB6" stroke-width="1"/>
+<text x="614" y="85" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8A5A00" font-weight="600">L0</text>
+<text x="646" y="85" font-family="Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif" font-size="16" fill="#17233A">frozen snapshot</text>
+<rect x="600" y="110" width="196" height="44" fill="none" stroke="#D3CBB6" stroke-width="1"/>
+<text x="614" y="137" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8A5A00" font-weight="600">L1</text>
+<text x="646" y="137" font-family="Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif" font-size="16" fill="#17233A">working set</text>
+<rect x="600" y="162" width="196" height="44" fill="none" stroke="#D3CBB6" stroke-width="1"/>
+<text x="614" y="189" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8A5A00" font-weight="600">L2</text>
+<text x="646" y="189" font-family="Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif" font-size="16" fill="#17233A">bi-temporal graph</text>
+<rect x="600" y="214" width="196" height="44" fill="none" stroke="#D3CBB6" stroke-width="1"/>
+<text x="614" y="241" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8A5A00" font-weight="600">L3</text>
+<text x="646" y="241" font-family="Iowan Old Style, Palatino Linotype, Palatino, Georgia, serif" font-size="16" fill="#17233A">verbatim vault</text>
+<text x="600" y="272" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#6E6858">one SQLite file, four layers</text>
+<line x1="44" y1="296" x2="796" y2="296" stroke="#D3CBB6" stroke-width="1" />
+<text x="44" y="312" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#6E6858" letter-spacing="0.4">License</text>
+<text x="44" y="330" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#17233A">MIT</text>
+<line x1="220" y1="306" x2="220" y2="330" stroke="#D3CBB6" stroke-width="1" />
+<text x="234" y="312" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#6E6858" letter-spacing="0.4">Runtime</text>
+<text x="234" y="330" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#17233A">Bun 1.x</text>
+<line x1="410" y1="306" x2="410" y2="330" stroke="#D3CBB6" stroke-width="1" />
+<text x="424" y="312" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#6E6858" letter-spacing="0.4">Runtime deps</text>
+<text x="424" y="330" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#17233A">0</text>
+<line x1="600" y1="306" x2="600" y2="330" stroke="#D3CBB6" stroke-width="1" />
+<text x="614" y="312" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#6E6858" letter-spacing="0.4">Evidence</text>
+<text x="614" y="330" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#17233A">7 benchmarks</text>
+</svg>
